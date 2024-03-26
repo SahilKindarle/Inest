@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Fundamental",
+    "description": "At this level, you have a basic grasp of the foundational elements of the skill. You're in the early stages of learning and understanding its concepts and techniques. Your primary focus should be on dedicating time to learning, practicing, and experimenting with the skill. Consistently applying what you've learned and keeping a record of your progress can help reinforce your understanding and improve your proficiency over time.
+    Dedicate regular time for learning and practice.
+    Experiment with different techniques and concepts within the skill.
+    Keep a detailed record of your progress and achievements.
+    Seek feedback from peers or mentors to identify areas for improvement.
+    Attend workshops, training sessions, or online courses to deepen your understanding",
+    "percentage": "40%"
+  },
+  {
+    "title": "Intermediate",
+    "description": "n the intermediate range, you have progressed beyond the fundamentals and can perform tasks within this competency with moderate proficiency. While you may occasionally require guidance or support from more experienced individuals, you can generally handle tasks independently. Your focus should now shift towards actively applying and refining your knowledge or skill in various contexts. You should also develop the ability to adapt to changes within this area and discuss their implications confidently.",
+    "points": [
+      "Actively seek out opportunities to apply the skill in real-world situations.",
+      "Collaborate with more experienced individuals to learn from their expertise.",
+      "Set specific goals for skill development and track your progress towards them.",
+      "Engage in self-reflection to identify strengths and areas for growth.",
+      "Take on challenging tasks or projects to expand your knowledge and capabilities"
+    ],
+    "percentage": "40%"
+  }
+]
