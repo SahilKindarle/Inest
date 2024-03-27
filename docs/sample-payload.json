@@ -1,0 +1,211 @@
+{
+  "personalDetails": {},
+  "section1": {
+    "answers": {
+      "8cf3251d-8dbe-473b-bf32-8d7ab9d4e45e": [
+        "d96ccf21-0f55-4a3b-84c5-d2ac72f62a7e"
+      ],
+      "db5f517e-a3ca-4379-aad2-1bb195265a84": [
+        "19f8e604-c3ed-432a-9525-6af558e96bc6"
+      ],
+      "8cf3abcb-bcc6-4774-b31b-ca8fc28b776c": [
+        "4a854486-8433-4f88-a566-62fdb1464552"
+      ],
+      "ecc3fdae-ef78-4cf7-bb62-16392a572521": [
+        "60d110c7-adcb-47bb-a78c-88b5ff7b277b"
+      ],
+      "311f0c34-cc25-4688-b334-4df520f44cb3": [
+        "30979b77-e89e-412a-9608-3a62f00159b8"
+      ],
+      "502c3a81-996e-4eaf-9a37-b1279e28bb93": [
+        "3a60fff6-86d9-438a-9794-f5f7e8cb4f06"
+      ],
+      "01c81eaf-9c69-4ea5-aa04-0358769267bc": [
+        "002dc122-05b0-4686-9b52-89092bf4390a"
+      ],
+      "2d46b6a9-68e5-4177-ae29-df14f5faaa81": [
+        "5a2a2d1f-9d25-4b08-981c-55f7af4a0020"
+      ],
+      "38ae1f6b-6de2-4e33-9671-f57e5d43e0cb": [
+        "92cf53c6-5e36-4515-a39d-1aa09997285b"
+      ],
+      "99819749-9cb9-471e-9eb4-6c4012674470": [
+        "cf48479b-484c-40d1-a20f-7302ccb19129"
+      ],
+      "276ed9fd-1175-4f82-a042-f0940d8f2cbe": [
+        "8a79c6f1-2c37-462b-a547-203e97eb6a1c"
+      ],
+      "1cb45bd4-16c3-436f-af38-0c2800b024c5": [
+        "a7f07c7e-1b5c-40de-a144-aba0c3c47a89"
+      ],
+      "46918820-52c1-4380-9913-2a0c846c33d6": [
+        "cd4f00c5-5529-4b19-bc5e-6b50ae77ff7a"
+      ],
+      "bf499f50-54a9-4ebd-be9f-7f6b68a43697": [
+        "b458a2c1-4a5b-4c0d-8461-48b6da1d2949"
+      ],
+      "f0ab50a6-17c4-43df-81c5-d97447bf123a": [
+        "9eebdaf1-bf23-4c65-b41d-a5653bbd2265"
+      ],
+      "c0e5ffa5-67cf-4c2a-8807-fb69c016d4b7": [
+        "c546889b-ae52-488d-bdec-8d1f712ddb1c",
+        "438a5b20-c737-4f21-a826-bbad1ab8f8be",
+        "b9f20b93-1e68-486e-aea1-c03b5fb0c2f3"
+      ]
+    },
+    "top3Sets": [
+      "c0e5ffa5-67cf-4c2a-8807-fb69c016d4b7",
+      "8cf3251d-8dbe-473b-bf32-8d7ab9d4e45e",
+      "db5f517e-a3ca-4379-aad2-1bb195265a84"
+    ]
+  },
+  "section2": {
+    "answers": {
+      "52b0bd31-71f8-491f-8fa6-ecaa0c3b403f": 2,
+      "a8559938-7a9e-425e-928c-6d890a31b52c": 3,
+      "4927286d-ba91-4ac5-ab4b-950f8ec353a2": 1,
+      "27eabe86-517c-49f7-b8b2-7fe1c4439031": 1,
+      "f4ea4acd-5687-4bd0-928a-8cacab1f6a55": 2,
+      "b1edb6f2-9b8e-4a93-bd34-2d31afb0a683": 3,
+      "d9bce9a2-da44-4229-832f-5dd42c8a3c22": 1,
+      "c3e6c2c7-23a3-42a1-bdbd-533a7186da3d": 3,
+      "8edae665-164d-482f-ad11-83e726b9e30c": 1,
+      "53c08142-63bb-468f-934c-b7d432e99042": 3,
+      "1d333e1b-038d-425e-bbdb-d851406d9c94": 3,
+      "c356e51b-1c9d-4555-9487-0cd84ce27d2f": 3,
+      "8e783ccb-76ca-4e25-9214-98309ea27ae0": 2,
+      "adb07b0e-39aa-4cac-81df-28abc839047c": 2,
+      "e172dfba-13b1-4b55-8faa-18fc644e6a25": 2,
+      "2b38c9b4-a5df-420a-8855-2fd7e6fce03a": 2,
+      "119e775d-2004-4e54-bea3-e0298e8c56b3": 2,
+      "96fa0580-7b1c-4e88-ae1a-00ecd1081a39": 2,
+      "b13f0275-b72f-4429-98c4-faed1b18fa8c": 2,
+      "487fde9e-0aeb-4645-b37d-17bfb0d09d59": 2,
+      "90fe9533-a2db-42e5-881f-3f2ed3cdc454": 2
+    },
+    "groupScores": [
+      {
+        "group": "A",
+        "label": "Verbal Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "B",
+        "label": "Numeric Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "C",
+        "label": "People Skills",
+        "score": 5,
+        "percentage": 55.55555555555556
+      },
+      {
+        "group": "D",
+        "label": "Adaptive Skills",
+        "score": 9,
+        "percentage": 100
+      },
+      {
+        "group": "E",
+        "label": "Analytical  Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "F",
+        "label": "Writing Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "G",
+        "label": "Time Management Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      }
+    ]
+  },
+  "section3": {
+    "answers": [5, 4, 3, 1, 5, 3, 3, 4, 2, 2, 3, 4, 1, 4, 2],
+    "finalScore": 46
+  },
+  "section4": {
+    "id": "9bbea410-5fb8-4b4b-abe1-0100e7f058a5",
+    "label": "Down to earth well-balanced harmonious",
+    "imageLink": "/images/section4/9bbea410-5fb8-4b4b-abe1-0100e7f058a5.png"
+  },
+  "section5": {
+    "answers": {
+      "q1": "A",
+      "q2": "B",
+      "q3": "A",
+      "q4": "A",
+      "q5": "A",
+      "q6": "A",
+      "q7": "B",
+      "q8": "B",
+      "q9": "A",
+      "q10": "A"
+    },
+    "sumA": 7,
+    "sumB": 3,
+    "verdict": "left-brain dominate"
+  },
+  "pdfData": {
+    "top3CareerGroups": [
+      "c0e5ffa5-67cf-4c2a-8807-fb69c016d4b7",
+      "8cf3251d-8dbe-473b-bf32-8d7ab9d4e45e",
+      "db5f517e-a3ca-4379-aad2-1bb195265a84"
+    ],
+    "skills": [
+      {
+        "group": "A",
+        "label": "Verbal Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "B",
+        "label": "Numeric Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "C",
+        "label": "People Skills",
+        "score": 5,
+        "percentage": 55.55555555555556
+      },
+      {
+        "group": "D",
+        "label": "Adaptive Skills",
+        "score": 9,
+        "percentage": 100
+      },
+      {
+        "group": "E",
+        "label": "Analytical  Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "F",
+        "label": "Writing Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      },
+      {
+        "group": "G",
+        "label": "Time Management Skills",
+        "score": 6,
+        "percentage": 66.66666666666666
+      }
+    ],
+    "emotionalIntelligence": 46,
+    "personality": "Down to earth well-balanced harmonious",
+    "brainType": "left-brain dominate"
+  }
+}

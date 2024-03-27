@@ -27,6 +27,10 @@ const routes = [
         path: 'section5',
         component: () => import('pages/Section5Page.vue'),
       },
+      {
+        path: 'done',
+        component: () => import('pages/AllDonePage.vue'),
+      },
     ],
   },
 
