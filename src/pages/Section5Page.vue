@@ -54,6 +54,7 @@
 <script>
 import { ref } from 'vue'
 // import { useRouter } from 'vue-router'
+import { useQuasar } from 'quasar'
 
 import section from '../assets/questions/section5.json'
 
@@ -69,6 +70,7 @@ export default {
 
   setup() {
     // const router = useRouter()
+    const $q = useQuasar()
 
     const answers = ref([])
     answers.value = Array(section.questions.length).fill('')
@@ -87,7 +89,10 @@ export default {
           }
         })
 
-        alert('Please answer all questions')
+        $q.notify({
+          type: 'negative',
+          message: 'Please answer all questions',
+        })
         return false
       }
 
