@@ -53,23 +53,18 @@
 
 <script>
 import { ref } from 'vue'
-// import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { useQuasar } from 'quasar'
 
 import section from '../assets/questions/section5.json'
 
 import { useAnswerStore } from 'src/stores/answer'
 
-// import { jsPDF } from "jspdf";
-// import pdfService from "../services/pdfGeneration";
-// import reportTemplate from "../assets/reportTemplate";
-// import indexHtml from "../services/index.html";
-
 export default {
   name: 'Section5Page',
 
   setup() {
-    // const router = useRouter()
+    const router = useRouter()
     const $q = useQuasar()
 
     const answers = ref([])
@@ -78,21 +73,22 @@ export default {
     const invalidAnswers = ref([])
 
     const validateAnswers = () => {
-      invalidAnswers.value = []
+      const invalid = []
 
-      const isAllAnswered = answers.value.every(a => a !== '')
+      answers.value.forEach((a, i) => {
+        if (a === '') {
+          invalid.push(section.questions[i].id)
+        }
+      })
 
-      if (!isAllAnswered) {
-        answers.value.forEach((a, i) => {
-          if (a === '') {
-            invalidAnswers.value.push(section.questions[i].id)
-          }
-        })
+      invalidAnswers.value = invalid
 
+      if (invalid.length !== 0) {
         $q.notify({
           type: 'negative',
           message: 'Please answer all questions',
         })
+
         return false
       }
 
@@ -100,7 +96,9 @@ export default {
     }
 
     const saveResult = () => {
-      if (!validateAnswers()) return
+      if (!validateAnswers()) {
+        return false
+      }
 
       const answersWithQId = {}
 
@@ -122,12 +120,14 @@ export default {
       }
 
       useAnswerStore().section5 = section5result
+
+      return true
     }
 
     const onSubmit = () => {
-      saveResult()
-      // router.push('/all-done')
-      alert('All done!')
+      if (saveResult()) {
+        router.push('/done')
+      }
     }
 
     return {
@@ -137,131 +137,5 @@ export default {
       onSubmit,
     }
   },
-
-  /*
-   // old setup
-
-
-  setup() {
-    return {
-      questionsFinal,
-      answers: ref([]),
-      lengthArray: ref([]),
-      options: [
-        { label: '1', value: '1' },
-        { label: '2', value: '2' },
-        { label: '3', value: '3' },
-        { label: '4', value: '4' },
-        { label: '5', value: '5' },
-      ],
-      async onSubmit() {
-        localStorage.setItem('section5Answers', JSON.stringify(this.answers))
-        // const section5answers = localStorage.getItem("section5Answers");
-        const section2answers = JSON.parse(
-          localStorage.getItem('section2Answers')
-        )
-        // const PersonalSectionAnswers = localStorage.getItem(
-        // "PersonalSectionAnswers"
-        // );
-
-        // ----------------Section 1 Analysis --------------
-        const section1answers = JSON.parse(
-          localStorage.getItem('section1Answers')
-        )
-
-        // console.log("Section1 - ", section1answers[0])
-        for (let i = 0; i < section1answers.length; i++) {
-          for (let j = 0; j < section1answers[i].length; j++) {
-            if (section1answers[i][j] == true) {
-              currLength = currLength + 1
-            }
-          }
-          this.lengthArray[i] = currLength
-          currLength = 0
-        }
-        var newLengthArray = JSON.stringify(this.lengthArray)
-
-        var outp = new Array()
-        for (var i = 0; i < newLengthArray.length; i++) {
-          outp.push(i)
-          if (outp.length > 3) {
-            outp.sort(function (a, b) {
-              return newLengthArray[b] - newLengthArray[a]
-            })
-            outp.pop()
-          }
-        }
-
-        var sectionOneResultArray = []
-        for (let i = 0; i < outp.length; i++) {
-          sectionOneResultArray.push(sectionOneJson[i])
-        }
-        console.log('sectionOneResultArray - ', sectionOneResultArray)
-
-        // -------------------------SectionTwoAnalysis-------------------------
-
-        console.log('section2answers - ', section2answers.length)
-        var newCalculatedArray = []
-        for (let i = 0; i < section2answers.length; i = i + 3) {
-          console.log('inside for')
-          console.log('section2answers[i] - ', section2answers[i])
-          console.log('section2answers[i+1] - ', section2answers[i + 1])
-          console.log('section2answers[i+2] - ', section2answers[i + 2])
-          var addn =
-            section2answers[i] + section2answers[i + 1] + section2answers[i + 2]
-          console.log('addn - ', addn)
-          newCalculatedArray.push(
-            Math.round(
-              ((section2answers[i] +
-                section2answers[i + 1] +
-                section2answers[i + 2]) /
-                9) *
-                100
-            )
-          )
-          if (i >= section2answers.length) {
-            break
-          }
-        }
-        console.log(newCalculatedArray)
-        let newCalculatedArrayAverage = 0
-        let sum = 0
-        for (let I = 0; I < newCalculatedArray.length; I++) {
-          sum = newCalculatedArray[I] + sum
-        }
-        console.log(sum)
-        console.log(newCalculatedArray.length)
-        newCalculatedArrayAverage = sum / newCalculatedArray.length
-
-        console.info(newCalculatedArrayAverage)
-
-        // const section3answers = localStorage.getItem("section3Answers");
-        // const section4answers = localStorage.getItem("section4Answers");
-        // reportTemplate.EmailPDF(localStorage.getItem("section5Answers"));
-
-        // Default export is a4 paper, portrait, using millimeters for units
-        //       var doc = new jsPDF();
-
-        // // Source HTMLElement or a string containing HTML.
-        // var elementHTML = document.querySelector("#content");
-
-        // doc.html(indexHtml, {
-        //     callback: function(doc) {
-        //         // Save the PDF
-        //         doc.save('document-html.pdf');
-        //     },
-        //     margin: [10, 10, 10, 10],
-        //     autoPaging: 'text',
-        //     x: 0,
-        //     y: 0,
-        //     width: 190, //target width in the PDF document
-        //     windowWidth: 675 //window width in CSS pixels
-        // });
-        // console.log("PersonalSectionAnswers - ", PersonalSectionAnswers)
-        //         reportTemplate.generatePDF("secOne", "secTwo", "secThree", "secFour", "secFive", PersonalSectionAnswers);
-      },
-    }
-  },
-  */
 }
 </script>
