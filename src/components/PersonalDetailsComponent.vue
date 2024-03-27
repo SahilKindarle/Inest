@@ -297,6 +297,9 @@
 
 <script>
 import { ref } from 'vue'
+
+import { useAnswerStore } from 'src/stores/answer'
+
 // import { useQuasar } from "quasar";
 export default {
   setup() {
@@ -489,6 +492,8 @@ export default {
         console.log(JSON.stringify(objFinal))
 
         localStorage.setItem('PersonalSectionAnswers', JSON.stringify(objFinal))
+
+        useAnswerStore().personalDetails = objFinal
 
         console.log(localStorage.getItem('PersonalSectionAnswers'))
       },
