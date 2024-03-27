@@ -68,6 +68,8 @@ const ANSWER_OPTIONS = [
 ]
 
 export default {
+  name: 'Section2Page',
+
   setup() {
     const router = useRouter()
     const $q = useQuasar()

@@ -61,6 +61,8 @@ import section from '../assets/questions/section1.json'
 import { useAnswerStore } from 'src/stores/answer'
 
 export default {
+  name: 'Section1Page',
+  
   setup() {
     const router = useRouter()
     const $q = useQuasar()
