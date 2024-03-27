@@ -11,7 +11,7 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 3</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
+                {{ `${index + 1}) ${que.title}` }}
               </div>
               <!-- {{ choice }} -->
               <q-option-group

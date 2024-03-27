@@ -11,12 +11,13 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 4</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
+                {{ `${index + 1}) ${que.title}` }}
               </div>
-              <!-- {{ choice }} -->
-              <div
+
+              <q-item
                 v-for="choice in que.choices"
                 :key="choice.id"
+                tag="label"
                 class="q-px-xl"
               >
                 <q-img
@@ -32,16 +33,7 @@
                   :label="choice.answer"
                   color="primary"
                 />
-                <!-- <q-checkbox
-                  dark
-                  v-model="answers[index][index2]"
-                  :label="que.choices[index2].answer"
-                  color="primary"
-                  :true-value="true"
-                  :false-value="false"
-                  keep-color
-                /> -->
-              </div>
+              </q-item>
             </div>
           </div>
           <div class="col-12">
@@ -63,18 +55,27 @@
 
 <script>
 import { ref } from 'vue'
+
 import questions from '../assets/questions.json'
-let questionsFinal = questions[3].questions
+
 export default {
+  name: 'Section4Page',
+
   setup() {
+    const questionsFinal = questions[3].questions
+
+    const answers = ref(null)
+
+    const onSubmit = () => {
+      localStorage.setItem('section4Answers', JSON.stringify(answers.value))
+
+      console.log(JSON.stringify(answers.value))
+    }
+
     return {
       questionsFinal,
-      answers: ref(null),
-      onSubmit() {
-        localStorage.setItem('section4Answers', JSON.stringify(this.answers))
-        // console.log(localStorage.getItem("section2Answers"))
-        // console.log(JSON.stringify(this.answers))
-      },
+      answers,
+      onSubmit,
     }
   },
 }
