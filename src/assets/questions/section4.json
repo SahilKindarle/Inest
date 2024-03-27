@@ -1,0 +1,46 @@
+{
+  "label": "Section 4: Personality Type",
+  "instructions": "Read each statement below and choose one from the options that best describes your interest.",
+  "options": [
+    {
+      "id": "e5a07e45-5ce8-4187-9c8f-b85bc628861b",
+      "label": "Carefree playful cheerful",
+      "imageLink": "/images/section4/e5a07e45-5ce8-4187-9c8f-b85bc628861b.png"
+    },
+    {
+      "id": "b04af1cb-d46e-45a0-be9f-2e1574961e2b",
+      "label": "Independent unconventional unfettered",
+      "imageLink": "/images/section4/b04af1cb-d46e-45a0-be9f-2e1574961e2b.png"
+    },
+    {
+      "id": "624fcaaa-a74d-45c9-a93f-34132e5fdecc",
+      "label": "Introspective sensitive reflective",
+      "imageLink": "/images/section4/624fcaaa-a74d-45c9-a93f-34132e5fdecc.png"
+    },
+    {
+      "id": "9bbea410-5fb8-4b4b-abe1-0100e7f058a5",
+      "label": "Down to earth well-balanced harmonious",
+      "imageLink": "/images/section4/9bbea410-5fb8-4b4b-abe1-0100e7f058a5.png"
+    },
+    {
+      "id": "b170a364-7729-4afe-b4c2-1ec8feaa2a1d",
+      "label": "Professional pragmatic self-assured",
+      "imageLink": "/images/section4/b170a364-7729-4afe-b4c2-1ec8feaa2a1d.png"
+    },
+    {
+      "id": "2ebdff4c-d440-4aa3-8bd3-4f04011f97ce",
+      "label": "Peaceful discreet non-aggressive",
+      "imageLink": "/images/section4/2ebdff4c-d440-4aa3-8bd3-4f04011f97ce.png"
+    },
+    {
+      "id": "8ce50472-dd85-4dc2-96b8-d04c90b07900",
+      "label": "Analytical trustworthy self-assured",
+      "imageLink": "/images/section4/8ce50472-dd85-4dc2-96b8-d04c90b07900.png"
+    },
+    {
+      "id": "d7dde90a-d1aa-4237-9a2e-74359f69c1e6",
+      "label": "Dynamic active extroverted",
+      "imageLink": "/images/section4/d7dde90a-d1aa-4237-9a2e-74359f69c1e6.png"
+    }
+  ]
+}
