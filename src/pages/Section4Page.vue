@@ -55,21 +55,24 @@
 
 <script>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 import questions from '../assets/questions.json'
+
+import { useAnswerStore } from 'src/stores/answer'
 
 export default {
   name: 'Section4Page',
 
   setup() {
+    const router = useRouter()
     const questionsFinal = questions[3].questions
 
     const answers = ref(null)
 
     const onSubmit = () => {
-      localStorage.setItem('section4Answers', JSON.stringify(answers.value))
-
-      console.log(JSON.stringify(answers.value))
+      useAnswerStore().section4 = answers.value
+      router.push('/section5')
     }
 
     return {
