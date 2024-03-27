@@ -9,26 +9,23 @@ const routes = [
       },
       {
         path: 'section1',
-        component: () => import('pages/SectionOnePage.vue'),
+        component: () => import('pages/Section1Page.vue'),
       },
       {
         path: 'section2',
-        component: () => import('pages/SectionTwoPage.vue'),
+        component: () => import('pages/Section2Page.vue'),
       },
-
       {
         path: 'section3',
-        component: () => import('pages/SectionThreePage.vue'),
+        component: () => import('pages/Section3Page.vue'),
       },
-
       {
         path: 'section4',
-        component: () => import('pages/SectionFourPage.vue'),
+        component: () => import('pages/Section4Page.vue'),
       },
-
       {
         path: 'section5',
-        component: () => import('pages/SectionFivePage.vue'),
+        component: () => import('pages/Section5Page.vue'),
       },
     ],
   },
