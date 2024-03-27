@@ -1,0 +1,171 @@
+{
+  "label": "Section 3: Emotional Intelligence",
+  "instructions": "Read each statement carefully, think over it and choose from the 5 options that describes you the best.",
+  "questions": [
+    {
+      "id": "1",
+      "label": "I can identify my emotions as I experience them, like recognizing when I feel happy, sad, or angry.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "I tend to get angry easily, especially when I'm feeling frustrated or irritated.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "People often tell me that I'm a good listener and that they feel heard when they talk to me.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "When I feel anxious or upset, I know how to calm myself down using techniques like deep breathing or meditation.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "5",
+      "label": "I enjoy arranging or coordinating activities for groups of people, whether it's for work or social gatherings.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "6",
+      "label": "I struggle to maintain focus on a task for a long period, finding it challenging to stay concentrated.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "7",
+      "label": "Moving on from feelings of frustration or unhappiness is tough for me, and I often dwell on them for a while.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "8",
+      "label": "I have a good understanding of my strengths and weaknesses, knowing what I excel at and where I need improvement.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "9",
+      "label": "I tend to avoid conflicts and negotiations, preferring to maintain harmony rather than confrontations.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "10",
+      "label": "I often feel dissatisfied with my work and don't find much enjoyment in it.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "11",
+      "label": "I regularly seek feedback from others on my performance, asking for suggestions on how I can do better.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "12",
+      "label": "I set long-term goals for myself and make it a point to review my progress regularly to stay on track.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    },
+    {
+      "id": "13",
+      "label": "I find it challenging to gauge other people's emotions or understand what they're feeling.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "14",
+      "label": "Building connections and rapport with others doesn't come naturally to me, and I struggle in social situations.",
+      "options": [
+        { "label": "Not at All", "value": 5 },
+        { "label": "Rarely", "value": 4 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 2 },
+        { "label": "Very Often", "value": 1 }
+      ]
+    },
+    {
+      "id": "15",
+      "label": "I make an effort to actively listen when people speak to me, showing interest and attentiveness in our conversations.",
+      "options": [
+        { "label": "Not at All", "value": 1 },
+        { "label": "Rarely", "value": 2 },
+        { "label": "Sometimes", "value": 3 },
+        { "label": "Often", "value": 4 },
+        { "label": "Very Often", "value": 5 }
+      ]
+    }
+  ]
+}
