@@ -1,0 +1,136 @@
+{
+  "instructions": "Which Side Are You On? Choose either “A” or “B” that most accurately describes you.",
+  "questions": [
+    {
+      "id": 1,
+      "label": "At home, .....",
+      "options": [
+        {
+          "value": "A",
+          "label": "my room has organized drawer and closets. I even try to organize other things around the house."
+        },
+        {
+          "value": "B",
+          "label": "I like the \"lived-in\" look. I clean as I see a need and when I have the time."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "",
+      "options": [
+        {
+          "value": "A",
+          "label": "My desk is usually clean and has everything in place."
+        },
+        {
+          "value": "B",
+          "label": "I leave my work out on my desk so I can work as I am inspired by ideas."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "",
+      "options": [
+        {
+          "value": "A",
+          "label": "I like using the \"tried and true\" method."
+        },
+        { "value": "B", "label": "I like creating new methods." }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "",
+      "options": [
+        {
+          "value": "A",
+          "label": "I follow directions carefully when I build a model, make a craft, etc."
+        },
+        {
+          "value": "B",
+          "label": "I like to build a model my way, making my own creation."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "label": "",
+      "options": [
+        {
+          "value": "A",
+          "label": "I complete one project at a time."
+        },
+        {
+          "value": "B",
+          "label": "I like to start many different projects, but do not like to finish them."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "label": "When I am asked to write a report on a subject, I........",
+      "options": [
+        {
+          "value": "A",
+          "label": "research information, then outline and organize my writing."
+        },
+        { "value": "B", "label": "work in my own self-inspired direction." }
+      ]
+    },
+    {
+      "id": 7,
+      "label": "When I had to do a project in class, I.....",
+      "options": [
+        {
+          "value": "A",
+          "label": "used my parents' ideas, a book's illustrated project or modeled another student's project who received an \"A+\" from my teacher."
+        },
+        {
+          "value": "B",
+          "label": "loved the challenge, and like a \"mad scientist,\" I produced a unique project."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "label": "When I am in charge of a big job with many people working, I usually...",
+      "options": [
+        {
+          "value": "A",
+          "label": "organize, give everyone their responsibilities, make lists, and make sure everyone finishes their part on time."
+        },
+        {
+          "value": "B",
+          "label": "work at my own pace, let others work on the job as they want. I want to take care of needs/problems as they arise."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Which of these activities would you like to do the most?",
+      "options": [
+        {
+          "value": "A",
+          "label": "planning the details for a trip/project"
+        },
+        { "value": "B", "label": "creating an original art form" }
+      ]
+    },
+    {
+      "id": 10,
+      "label": "I hate it when other people.....",
+      "options": [
+        {
+          "value": "A",
+          "label": "are indecisive about what activities to do when I am with them."
+        },
+        {
+          "value": "B",
+          "label": "plan activities in step-by-step detail when I am with them."
+        }
+      ]
+    }
+  ]
+}
