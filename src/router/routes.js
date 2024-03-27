@@ -8,26 +8,26 @@ const routes = [
         component: () => import('pages/PersonalDetailsPage.vue'),
       },
       {
-        path: '/section1',
+        path: 'section1',
         component: () => import('pages/SectionOnePage.vue'),
       },
       {
-        path: '/section2',
+        path: 'section2',
         component: () => import('pages/SectionTwoPage.vue'),
       },
 
       {
-        path: '/section3',
+        path: 'section3',
         component: () => import('pages/SectionThreePage.vue'),
       },
 
       {
-        path: '/section4',
+        path: 'section4',
         component: () => import('pages/SectionFourPage.vue'),
       },
 
       {
-        path: '/section5',
+        path: 'section5',
         component: () => import('pages/SectionFivePage.vue'),
       },
     ],
