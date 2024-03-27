@@ -51,9 +51,9 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
-import questions from "../assets/questions.json";
-let questionsFinal = questions[0].questions;
+import { ref } from 'vue'
+import questions from '../assets/questions.json'
+let questionsFinal = questions[0].questions
 
 export default {
   setup() {
@@ -78,14 +78,14 @@ export default {
         [false, false, false, false, false, false, false, false, false],
       ]),
       onSubmit() {
-        if (localStorage.getItem("section1Answers")) {
-          localStorage.removeItem("section1Answers");
+        if (localStorage.getItem('section1Answers')) {
+          localStorage.removeItem('section1Answers')
         }
-        localStorage.setItem("section1Answers", JSON.stringify(this.answers));
+        localStorage.setItem('section1Answers', JSON.stringify(this.answers))
         // console.log(localStorage.getItem("section1Answers"))
         // console.log(JSON.stringify(this.answers))
       },
-    };
+    }
   },
-};
+}
 </script>

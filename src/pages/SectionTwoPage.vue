@@ -11,7 +11,7 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 2</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{ "          )  " }} {{ que.title }}
+                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
               </div>
               <!-- {{ choice }} -->
               <q-option-group
@@ -63,43 +63,42 @@
 </template>
 
 <script>
-import { useQuasar } from "quasar";
-import { computed, ref } from "vue";
-import questions from "../assets/questions.json";
-let questionsFinal = questions[1].questions;
-console.log("questionsFinal - ", questionsFinal);
+import { useQuasar } from 'quasar'
+import { ref } from 'vue'
+import questions from '../assets/questions.json'
+let questionsFinal = questions[1].questions
+console.log('questionsFinal - ', questionsFinal)
 export default {
   setup() {
-    const $q = useQuasar();
+    const $q = useQuasar()
     return {
       questionsFinal,
       answers: ref([]),
       options: [
-        { label: "I agree", value: 1 },
-        { label: "I may be", value: 2 },
-        { label: "I Disagree", value: 3 },
+        { label: 'I agree', value: 1 },
+        { label: 'I may be', value: 2 },
+        { label: 'I Disagree', value: 3 },
       ],
       onSubmit() {
-        console.log(JSON.stringify(this.answers));
+        console.log(JSON.stringify(this.answers))
         // var answersArray = this.answers
-        if(this.answers.length == 0){
+        if (this.answers.length == 0) {
           $q.notify({
-              type: "negative",
-              message: "Please fill all the answers.",
-            });
-        }else {
-
+            type: 'negative',
+            message: 'Please fill all the answers.',
+          })
+        } else {
           for (let i = 0; i < this.answers.length; i++) {
-            console.log("answersArray[i] - ", JSON.stringify(this.answers[i]));
+            console.log('answersArray[i] - ', JSON.stringify(this.answers[i]))
             if (!this.answers[i]) {
-              console.log("iff");
+              console.log('iff')
               $q.notify({
-                type: "negative",
-                message: "Please fill all the answers.",
-              });
+                type: 'negative',
+                message: 'Please fill all the answers.',
+              })
             }
           }
-          }
+        }
 
         // this.answers.forEach(e => {
         //   console.log("in each")
@@ -111,14 +110,14 @@ export default {
 
         //   }
         // });
-        if (localStorage.getItem("section2Answers")) {
-          localStorage.removeItem("section2Answers");
+        if (localStorage.getItem('section2Answers')) {
+          localStorage.removeItem('section2Answers')
         }
-        localStorage.setItem("section2Answers", JSON.stringify(this.answers));
+        localStorage.setItem('section2Answers', JSON.stringify(this.answers))
         // console.log(localStorage.getItem("section2Answers"))
         // console.log(JSON.stringify(this.answers))
       },
-    };
+    }
   },
-};
+}
 </script>

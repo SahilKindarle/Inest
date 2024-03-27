@@ -11,7 +11,7 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 3</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{"          )  "}} {{ que.title }}
+                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
               </div>
               <!-- {{ choice }} -->
               <q-option-group
@@ -21,7 +21,6 @@
                 :options="options"
                 type="radio"
               />
-
             </div>
           </div>
           <div class="col-12">
@@ -42,28 +41,28 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
-import questions from "../assets/questions.json";
-let questionsFinal = questions[2].questions;
-console.log("questionsFinal - ", questionsFinal);
+import { ref } from 'vue'
+import questions from '../assets/questions.json'
+let questionsFinal = questions[2].questions
+console.log('questionsFinal - ', questionsFinal)
 export default {
   setup() {
     return {
       questionsFinal,
       answers: ref([null]),
       options: [
-        { label: "Not at All", value: "notAtAll" },
-        { label: "Rarely", value: "rarely" },
-        { label: "Sometimes", value: "sometimes" },
-        { label: "Often", value: "often" },
-        { label: "Very Often", value: "veryOften" },
+        { label: 'Not at All', value: 'notAtAll' },
+        { label: 'Rarely', value: 'rarely' },
+        { label: 'Sometimes', value: 'sometimes' },
+        { label: 'Often', value: 'often' },
+        { label: 'Very Often', value: 'veryOften' },
       ],
       onSubmit() {
         console.log(JSON.stringify(this.answers))
-        localStorage.setItem("section3Answers", JSON.stringify(this.answers));
-        console.log(localStorage.getItem("section3Answers"))
+        localStorage.setItem('section3Answers', JSON.stringify(this.answers))
+        console.log(localStorage.getItem('section3Answers'))
       },
-    };
+    }
   },
-};
+}
 </script>

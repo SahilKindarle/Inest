@@ -1,12 +1,14 @@
-exports.generatePDF = ({}) => {
-  const PersonalSectionAnswers = localStorage.getItem(
-    "PersonalSectionAnswers"
-    );
-  const secFive = localStorage.getItem("section5Answers");
+exports.generatePDF = () => {
+  const PersonalSectionAnswers = localStorage.getItem('PersonalSectionAnswers')
+  const secOne = localStorage.getItem('section1Answers')
+  const secTwo = localStorage.getItem('section2Answers')
+  const secThree = localStorage.getItem('section3Answers')
+  const secFour = localStorage.getItem('section4Answers')
+  const secFive = localStorage.getItem('section5Answers')
 
-  console.log("data - " , PersonalSectionAnswers);
+  console.log('data - ', PersonalSectionAnswers)
   let content = {
-      content: `<!DOCTYPE html>
+    content: `<!DOCTYPE html>
       <html lang="en">
 
       <head>
@@ -346,10 +348,14 @@ exports.generatePDF = ({}) => {
                       <div class="information">
                           <div class="details">
                               <h4 style="margin-bottom: 10px;font-size: 1.4rem;">You are a . . .</h4>
-                              <p style="margin-bottom: 8px;">${secFive.title}</p>
+                              <p style="margin-bottom: 8px;">${
+                                secFive.title
+                              }</p>
                               <p>${secFive.description}</p>
                               <ul style="margin-top: 10px;">
-                              ${secFive?.points.map(point => `<li>${point}</li>`).join('')}
+                              ${secFive?.points
+                                .map(point => `<li>${point}</li>`)
+                                .join('')}
                               </ul>
                           </div>
                           <div class="brain-svg">
@@ -358,7 +364,12 @@ exports.generatePDF = ({}) => {
                                   <metadata>
                                       Created by potrace 1.10, written by Peter Selinger 2001-2011
                                   </metadata>
-                                  <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill=${secFive.title.toLowerCase() == String('LEFT BRAINED PERSON!').toLowerCase() ? 'red' : 'black'}
+                                  <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill=${
+                                    secFive.title.toLowerCase() ==
+                                    String('LEFT BRAINED PERSON!').toLowerCase()
+                                      ? 'red'
+                                      : 'black'
+                                  }
                                       stroke="none">
                                       <path d="M941 2902 c-19 -2 -43 -9 -55 -17 -12 -7 -37 -16 -56 -20 -45 -10
                      -166 -78 -207 -117 -17 -17 -37 -43 -43 -57 -6 -15 -23 -34 -38 -43 -15 -9
@@ -531,7 +542,14 @@ exports.generatePDF = ({}) => {
                                   <metadata>
                                       Created by potrace 1.10, written by Peter Selinger 2001-2011
                                   </metadata>
-                                  <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill=${secFive.title.toLowerCase() == String('RIGHT BRAINED PERSON!').toLowerCase() ? 'red' : 'black'}
+                                  <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill=${
+                                    secFive.title.toLowerCase() ==
+                                    String(
+                                      'RIGHT BRAINED PERSON!'
+                                    ).toLowerCase()
+                                      ? 'red'
+                                      : 'black'
+                                  }
                                       stroke="none">
                                       <path d="M81 2896 c-33 -12 -60 -46 -61 -78 0 -10 -4 -18 -10 -18 -5 0 -10
                      -20 -10 -45 0 -60 16 -57 25 5 13 91 64 130 171 130 117 0 277 -54 391 -132
@@ -704,7 +722,9 @@ exports.generatePDF = ({}) => {
                       </div>
                       <div style="margin-bottom: 2.5rem;" class="personality-type">
                           <h4 style="margin-bottom: 10px;font-size: 1.4rem;">Your Personality Type</h4>
-                          <h5 style="margin-bottom: 5px; ">${secFour?.title}</h5>
+                          <h5 style="margin-bottom: 5px; ">${
+                            secFour?.title
+                          }</h5>
                           <p>${secFour?.description}</p>
                       </div>
 
@@ -717,13 +737,27 @@ exports.generatePDF = ({}) => {
                   </div>
                   <div class="skills-information">
                       <div class="skills-score">
-                      <p>Verbal Skills: <span>${secTwo.scores.verbalSkills.toFixed(0)}%</span> </p>
-                      <p>Numeric Skills: <span>${secTwo.scores.numericSkills.toFixed(0)}%</span> </p>
-                      <p>People Skills: <span>${secTwo.scores.peopleSkills.toFixed(0)}%</span> </p>
-                      <p>Adaptive Skills: <span>${secTwo.scores.adaptiveSkills.toFixed(0)}%</span> </p>
-                      <p>Analytical Skills: <span>${secTwo.scores.analyticalSkills.toFixed(0)}%</span> </p>
-                      <p>Writing Skills: <span>${secTwo.scores.writingSkills.toFixed(0)}%</span> </p>
-                      <p>Time Management Skills: <span>${secTwo.scores.timeManagmentSkills.toFixed(0)}%</span> </p>
+                      <p>Verbal Skills: <span>${secTwo.scores.verbalSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>Numeric Skills: <span>${secTwo.scores.numericSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>People Skills: <span>${secTwo.scores.peopleSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>Adaptive Skills: <span>${secTwo.scores.adaptiveSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>Analytical Skills: <span>${secTwo.scores.analyticalSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>Writing Skills: <span>${secTwo.scores.writingSkills.toFixed(
+                        0
+                      )}%</span> </p>
+                      <p>Time Management Skills: <span>${secTwo.scores.timeManagmentSkills.toFixed(
+                        0
+                      )}%</span> </p>
                       </div>
                       <div class="skill-score">
                           <div class="graph">
@@ -768,19 +802,33 @@ exports.generatePDF = ({}) => {
                                       </div>
                                   </div>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.verbalSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.verbalSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.numericSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.numericSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.peopleSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.peopleSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.adaptiveSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.adaptiveSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.analyticalSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.analyticalSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.writingSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.writingSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                                   <progress class="graph-indicator" id="file" value="100" max="100"
-                                      style="max-width: ${secTwo.scores.timeManagmentSkills.toFixed(0)}%;"></progress>
+                                      style="max-width: ${secTwo.scores.timeManagmentSkills.toFixed(
+                                        0
+                                      )}%;"></progress>
                               </div>
                           </div>
                       </div>
@@ -799,36 +847,49 @@ exports.generatePDF = ({}) => {
               <img src="https://qs-training-resources.s3.amazonaws.com/training_practice_tests/banner.jpg" alt="">
               <h1 style="text-align: center; ">Career Suitability Assessment</h1>
               <div class="content">
-                  <h4>Your Skill Proficiency Level -- ${secTwo.overall.title}</h4>
+                  <h4>Your Skill Proficiency Level -- ${
+                    secTwo.overall.title
+                  }</h4>
                   <p style="margin-top: 1rem;">${secTwo.overall.description}</p>
                   <ul style="padding-left: 3rem; margin-top: 1rem;">
-                  ${secTwo.overall.points.map(point => `<li>${point}</li>`).join('')}
+                  ${secTwo.overall.points
+                    .map(point => `<li>${point}</li>`)
+                    .join('')}
                   </ul>
                   <br>
                   <br>
                   <h4>Your Emotional Quotient</h4>
 
-                  <h2 style="text-align: end;">YOUR SCORE - ${secThree.score}</h2>
+                  <h2 style="text-align: end;">YOUR SCORE - ${
+                    secThree.score
+                  }</h2>
                   <br>
                   <div class="emotianal-details">
-                  ${secThree.scoreContent.map(point => `<p>${point}</p>`).join('')}
+                  ${secThree.scoreContent
+                    .map(point => `<p>${point}</p>`)
+                    .join('')}
                   </div>
 
                   <h4 style="margin-bottom: 12px; margin-top: 2rem">Your Best Suitable Profession</h4>
                   <br>
                   {{!-- <div class="grid-container">
-                      ${secOne?.map((item, i) => (
-          `<div>
-                              <p style="text-align: center;"><strong>Option - 0${i + 1}</strong></p>
+                      ${secOne
+                        ?.map(
+                          (item, i) =>
+                            `<div>
+                              <p style="text-align: center;"><strong>Option - 0${
+                                i + 1
+                              }</strong></p>
                               <p class="title">${item.category}</p>
                               <p class="desc">${item.description}</p>
                               <ol>
-                              ${item.jobs.map(job => (
-              `<li>${job}</li>`
-          )).join('')}
+                              ${item.jobs
+                                .map(job => `<li>${job}</li>`)
+                                .join('')}
                               </ol>
                           </div>`
-      )).join('')}
+                        )
+                        .join('')}
                   </div> --}}
               </div>
               <footer>
@@ -933,9 +994,8 @@ exports.generatePDF = ({}) => {
           </script>
       </body>
 
-      </html>`
+      </html>`,
   }
 
-  return content;
-};
-
+  return content
+}

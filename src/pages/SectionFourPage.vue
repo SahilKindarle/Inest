@@ -11,7 +11,7 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 4</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{ "          )  " }} {{ que.title }}
+                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
               </div>
               <!-- {{ choice }} -->
               <div
@@ -62,20 +62,20 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
-import questions from "../assets/questions.json";
-let questionsFinal = questions[3].questions;
+import { ref } from 'vue'
+import questions from '../assets/questions.json'
+let questionsFinal = questions[3].questions
 export default {
   setup() {
     return {
       questionsFinal,
       answers: ref(null),
       onSubmit() {
-        localStorage.setItem("section4Answers", JSON.stringify(this.answers));
+        localStorage.setItem('section4Answers', JSON.stringify(this.answers))
         // console.log(localStorage.getItem("section2Answers"))
         // console.log(JSON.stringify(this.answers))
       },
-    };
+    }
   },
-};
+}
 </script>

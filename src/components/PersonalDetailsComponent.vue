@@ -296,51 +296,51 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { useQuasar } from "quasar";
+import { ref } from 'vue'
+// import { useQuasar } from "quasar";
 export default {
   setup() {
-    const $q = useQuasar();
-    const fName = ref(null);
-    const fNameRef = ref(null);
-    const phoneRef = ref(null);
-    const dobRef = ref(null);
-    const genderRef = ref(null);
-    const email = ref(null);
-    const emailRef = ref(null);
-    const phone = ref(null);
-    const gender = ref("Male");
-    const homeAddress = ref(null);
-    const schoolAddress = ref(null);
-    const classSection = ref(null);
-    const fatherName = ref(null);
-    const fatherOccupation = ref(null);
-    const fatherMobile = ref(null);
-    const fatherEmail = ref(null);
-    const motherName = ref(null);
-    const motherOccupation = ref(null);
-    const motherMobile = ref(null);
-    const motherEmail = ref(null);
-    const examName = ref(null);
-    const marksScoSpeak = ref(null);
-    const language = ref(null);
-    const language2 = ref(null);
-    const languagesSelection = ref([]);
-    const dob = ref(null);
-    const languagesSelection2 = ref([]);
-    const homeAddressRef = ref(null);
-    const schoolAddressRef = ref(null);
-    const classSectionRef = ref(null);
-    const fatherMobileRef = ref(null);
-    const fatherNameRef = ref(null);
-    const fatherEmailRef = ref(null);
-    const motherNameRef = ref(null);
-    const motherMobileRef = ref(null);
-    const motherEmailRef = ref(null);
-    const ExamNameRef = ref(null);
-    const marksScoredRef = ref(null);
-    const languageRef = ref(null);
-    const language2Ref = ref(null);
+    // const $q = useQuasar();
+    const fName = ref(null)
+    const fNameRef = ref(null)
+    const phoneRef = ref(null)
+    const dobRef = ref(null)
+    const genderRef = ref(null)
+    const email = ref(null)
+    const emailRef = ref(null)
+    const phone = ref(null)
+    const gender = ref('Male')
+    const homeAddress = ref(null)
+    const schoolAddress = ref(null)
+    const classSection = ref(null)
+    const fatherName = ref(null)
+    const fatherOccupation = ref(null)
+    const fatherMobile = ref(null)
+    const fatherEmail = ref(null)
+    const motherName = ref(null)
+    const motherOccupation = ref(null)
+    const motherMobile = ref(null)
+    const motherEmail = ref(null)
+    const examName = ref(null)
+    const marksScoSpeak = ref(null)
+    const language = ref(null)
+    const language2 = ref(null)
+    const languagesSelection = ref([])
+    const dob = ref(null)
+    const languagesSelection2 = ref([])
+    const homeAddressRef = ref(null)
+    const schoolAddressRef = ref(null)
+    const classSectionRef = ref(null)
+    const fatherMobileRef = ref(null)
+    const fatherNameRef = ref(null)
+    const fatherEmailRef = ref(null)
+    const motherNameRef = ref(null)
+    const motherMobileRef = ref(null)
+    const motherEmailRef = ref(null)
+    const ExamNameRef = ref(null)
+    const marksScoredRef = ref(null)
+    const languageRef = ref(null)
+    const language2Ref = ref(null)
 
     return {
       dense: ref(false),
@@ -384,60 +384,59 @@ export default {
       languageRef,
       language2Ref,
       marksScoredRef,
-      genderOptions: ["Male", "Female", "Other"],
+      genderOptions: ['Male', 'Female', 'Other'],
       languageRules: [
-        (val) =>
-          (val && val.length > 2) || "Please provide valid Language Name",
+        val => (val && val.length > 2) || 'Please provide valid Language Name',
       ],
       marksScoSpeakRules: [
-        (val) => (val && val > 0) || "Please provide valid Marks",
+        val => (val && val > 0) || 'Please provide valid Marks',
       ],
       examNameRules: [
-        (val) => (val && val.length > 5) || "Please provide valid Exam Name",
+        val => (val && val.length > 5) || 'Please provide valid Exam Name',
       ],
       motherMobileRules: [
-        (val) => (val && val.length > 9) || "Please provide valid Phone Number",
+        val => (val && val.length > 9) || 'Please provide valid Phone Number',
       ],
       fatherNameRules: [
-        (val) => (val && val.length > 0) || "Please provide Father Name",
+        val => (val && val.length > 0) || 'Please provide Father Name',
       ],
       motherNameRules: [
-        (val) => (val && val.length > 0) || "Please provide Mother Name",
+        val => (val && val.length > 0) || 'Please provide Mother Name',
       ],
       classSectionRules: [
-        (val) => (val && val.length > 0) || "Please provide class and section",
+        val => (val && val.length > 0) || 'Please provide class and section',
       ],
       homeAddressRules: [
-        (val) => (val && val.length > 0) || "Please provide Home Address",
+        val => (val && val.length > 0) || 'Please provide Home Address',
       ],
       schoolAddressRules: [
-        (val) => (val && val.length > 0) || "Please provide Home Address",
+        val => (val && val.length > 0) || 'Please provide Home Address',
       ],
       fNameRules: [
-        (val) => (val && val.length > 0) || "Please provide full name",
+        val => (val && val.length > 0) || 'Please provide full name',
       ],
       emailRules: [
-        (val) => (val && val.length > 0) || "Please provide a valid Email",
+        val => (val && val.length > 0) || 'Please provide a valid Email',
       ],
       onSubmit() {
-        fNameRef.value.validate();
-        emailRef.value.validate();
-        phoneRef.value.validate();
-        dobRef.value.validate();
-        genderRef.value.validate();
-        homeAddressRef.value.validate();
-        schoolAddressRef.value.validate();
-        classSectionRef.value.validate();
-        fatherNameRef.value.validate();
-        fatherMobileRef.value.validate();
-        fatherEmailRef.value.validate();
-        motherNameRef.value.validate();
-        motherMobileRef.value.validate();
-        motherEmailRef.value.validate();
-        ExamNameRef.value.validate();
-        marksScoredRef.value.validate();
-        languageRef.value.validate();
-        language2Ref.value.validate();
+        fNameRef.value.validate()
+        emailRef.value.validate()
+        phoneRef.value.validate()
+        dobRef.value.validate()
+        genderRef.value.validate()
+        homeAddressRef.value.validate()
+        schoolAddressRef.value.validate()
+        classSectionRef.value.validate()
+        fatherNameRef.value.validate()
+        fatherMobileRef.value.validate()
+        fatherEmailRef.value.validate()
+        motherNameRef.value.validate()
+        motherMobileRef.value.validate()
+        motherEmailRef.value.validate()
+        ExamNameRef.value.validate()
+        marksScoredRef.value.validate()
+        languageRef.value.validate()
+        language2Ref.value.validate()
 
         //   console.log("fName - ", JSON.stringify(fName))
         // console.log("phone - ", JSON.stringify(phone))
@@ -462,43 +461,40 @@ export default {
         // console.log("languagesSelection2 - ", JSON.stringify(languagesSelection2))
         // console.log("dob - ", JSON.stringify(dob))
 
-        console.log(fName.value);
+        console.log(fName.value)
 
-        var objFinal = {};
-        objFinal.fName = fName.value;
-        objFinal.phone = phone.value;
-        objFinal.email = email.value;
-        objFinal.gender = gender.value;
-        objFinal.homeAddress = homeAddress.value;
-        objFinal.schoolAddress = schoolAddress.value;
-        objFinal.classSection = classSection.value;
-        objFinal.fatherName = fatherName.value;
-        objFinal.fatherOccupation = fatherOccupation.value;
-        objFinal.fatherEmail = fatherEmail.value;
-        objFinal.fatherMobile = fatherMobile.value;
-        objFinal.motherName = motherName.value;
-        objFinal.motherOccupation = motherOccupation.value;
-        objFinal.motherEmail = motherEmail.value;
-        objFinal.motherMobile = motherMobile.value;
-        objFinal.examName = examName.value;
-        objFinal.marksScoSpeak = marksScoSpeak.value;
-        objFinal.language = language.value;
-        objFinal.language2 = language2.value;
-        objFinal.languagesSelection = languagesSelection.value;
-        objFinal.languagesSelection2 = languagesSelection2.value;
-        objFinal.dob = dob.value;
-        console.log(JSON.stringify(objFinal));
+        var objFinal = {}
+        objFinal.fName = fName.value
+        objFinal.phone = phone.value
+        objFinal.email = email.value
+        objFinal.gender = gender.value
+        objFinal.homeAddress = homeAddress.value
+        objFinal.schoolAddress = schoolAddress.value
+        objFinal.classSection = classSection.value
+        objFinal.fatherName = fatherName.value
+        objFinal.fatherOccupation = fatherOccupation.value
+        objFinal.fatherEmail = fatherEmail.value
+        objFinal.fatherMobile = fatherMobile.value
+        objFinal.motherName = motherName.value
+        objFinal.motherOccupation = motherOccupation.value
+        objFinal.motherEmail = motherEmail.value
+        objFinal.motherMobile = motherMobile.value
+        objFinal.examName = examName.value
+        objFinal.marksScoSpeak = marksScoSpeak.value
+        objFinal.language = language.value
+        objFinal.language2 = language2.value
+        objFinal.languagesSelection = languagesSelection.value
+        objFinal.languagesSelection2 = languagesSelection2.value
+        objFinal.dob = dob.value
+        console.log(JSON.stringify(objFinal))
 
-        localStorage.setItem(
-          "PersonalSectionAnswers",
-          JSON.stringify(objFinal)
-        );
+        localStorage.setItem('PersonalSectionAnswers', JSON.stringify(objFinal))
 
-        console.log(localStorage.getItem("PersonalSectionAnswers"))
+        console.log(localStorage.getItem('PersonalSectionAnswers'))
       },
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="sass" scoped>

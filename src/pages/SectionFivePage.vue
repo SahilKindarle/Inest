@@ -11,7 +11,7 @@
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 5</div>
             <div v-for="(que, index) in questionsFinal" :key="que.id">
               <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ index + 1 }} {{ "          )  " }} {{ que.title }}
+                {{ index + 1 }} {{ '          )  ' }} {{ que.title }}
               </div>
               <!-- {{ choice }} -->
               <div class="row">
@@ -156,15 +156,15 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
-import { jsPDF } from "jspdf";
-import questions from "../assets/questions.json";
-import sectionOneJson from "../assets/sectionOne.json";
+import { ref } from 'vue'
+// import { jsPDF } from "jspdf";
+import questions from '../assets/questions.json'
+import sectionOneJson from '../assets/sectionOne.json'
 // import pdfService from "../services/pdfGeneration";
 // import reportTemplate from "../assets/reportTemplate";
 // import indexHtml from "../services/index.html";
-let questionsFinal = questions[4].questions;
-let currLength = 0;
+let questionsFinal = questions[4].questions
+let currLength = 0
 export default {
   setup() {
     return {
@@ -172,70 +172,68 @@ export default {
       answers: ref([]),
       lengthArray: ref([]),
       options: [
-        { label: "1", value: "1" },
-        { label: "2", value: "2" },
-        { label: "3", value: "3" },
-        { label: "4", value: "4" },
-        { label: "5", value: "5" },
+        { label: '1', value: '1' },
+        { label: '2', value: '2' },
+        { label: '3', value: '3' },
+        { label: '4', value: '4' },
+        { label: '5', value: '5' },
       ],
       async onSubmit() {
-        localStorage.setItem("section5Answers", JSON.stringify(this.answers));
+        localStorage.setItem('section5Answers', JSON.stringify(this.answers))
         // const section5answers = localStorage.getItem("section5Answers");
         const section2answers = JSON.parse(
-          localStorage.getItem("section2Answers")
-        );
+          localStorage.getItem('section2Answers')
+        )
         // const PersonalSectionAnswers = localStorage.getItem(
         // "PersonalSectionAnswers"
         // );
 
         // ----------------Section 1 Analysis --------------
         const section1answers = JSON.parse(
-          localStorage.getItem("section1Answers")
-        );
+          localStorage.getItem('section1Answers')
+        )
 
         // console.log("Section1 - ", section1answers[0])
         for (let i = 0; i < section1answers.length; i++) {
           for (let j = 0; j < section1answers[i].length; j++) {
             if (section1answers[i][j] == true) {
-              currLength = currLength + 1;
+              currLength = currLength + 1
             }
           }
-          this.lengthArray[i] = currLength;
-          currLength = 0;
+          this.lengthArray[i] = currLength
+          currLength = 0
         }
-        var newLengthArray = JSON.stringify(this.lengthArray);
+        var newLengthArray = JSON.stringify(this.lengthArray)
 
-        var outp = new Array();
+        var outp = new Array()
         for (var i = 0; i < newLengthArray.length; i++) {
-          outp.push(i);
+          outp.push(i)
           if (outp.length > 3) {
             outp.sort(function (a, b) {
-              return newLengthArray[b] - newLengthArray[a];
-            });
-            outp.pop();
+              return newLengthArray[b] - newLengthArray[a]
+            })
+            outp.pop()
           }
         }
 
-        var sectionOneResultArray = [];
+        var sectionOneResultArray = []
         for (let i = 0; i < outp.length; i++) {
-          sectionOneResultArray.push(sectionOneJson[i]);
+          sectionOneResultArray.push(sectionOneJson[i])
         }
-        console.log("sectionOneResultArray - ", sectionOneResultArray);
+        console.log('sectionOneResultArray - ', sectionOneResultArray)
 
         // -------------------------SectionTwoAnalysis-------------------------
 
-        console.log("section2answers - ", section2answers.length);
-        var newCalculatedArray = [];
+        console.log('section2answers - ', section2answers.length)
+        var newCalculatedArray = []
         for (let i = 0; i < section2answers.length; i = i + 3) {
-          console.log("inside for");
-          console.log("section2answers[i] - ", section2answers[i]);
-          console.log("section2answers[i+1] - ", section2answers[i + 1]);
-          console.log("section2answers[i+2] - ", section2answers[i + 2]);
+          console.log('inside for')
+          console.log('section2answers[i] - ', section2answers[i])
+          console.log('section2answers[i+1] - ', section2answers[i + 1])
+          console.log('section2answers[i+2] - ', section2answers[i + 2])
           var addn =
-            section2answers[i] +
-            section2answers[i + 1] +
-            section2answers[i + 2];
-          console.log("addn - ", addn);
+            section2answers[i] + section2answers[i + 1] + section2answers[i + 2]
+          console.log('addn - ', addn)
           newCalculatedArray.push(
             Math.round(
               ((section2answers[i] +
@@ -244,21 +242,22 @@ export default {
                 9) *
                 100
             )
-          );
+          )
           if (i >= section2answers.length) {
-            break;
+            break
           }
         }
-        console.log(newCalculatedArray);
-        let newCalculatedArrayAverage = 0;
+        console.log(newCalculatedArray)
+        let newCalculatedArrayAverage = 0
         let sum = 0
         for (let I = 0; I < newCalculatedArray.length; I++) {
-          sum =
-            newCalculatedArray[I] + sum;
+          sum = newCalculatedArray[I] + sum
         }
         console.log(sum)
         console.log(newCalculatedArray.length)
-        newCalculatedArrayAverage = sum/newCalculatedArray.length
+        newCalculatedArrayAverage = sum / newCalculatedArray.length
+
+        console.info(newCalculatedArrayAverage)
 
         // const section3answers = localStorage.getItem("section3Answers");
         // const section4answers = localStorage.getItem("section4Answers");
@@ -285,7 +284,7 @@ export default {
         // console.log("PersonalSectionAnswers - ", PersonalSectionAnswers)
         //         reportTemplate.generatePDF("secOne", "secTwo", "secThree", "secFour", "secFive", PersonalSectionAnswers);
       },
-    };
+    }
   },
-};
+}
 </script>
