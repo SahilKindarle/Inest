@@ -9,27 +9,26 @@
         <form class="q-gutter-md" @submit.prevent.stop="onSubmit">
           <div class="q-pa-xl">
             <div class="text-h6 q-px-xl montserrat q-mb-md">Section 1</div>
-            <div v-for="(que, index) in questionsFinal" :key="que.id">
-              <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ `${index + 1}) ${que.title}` }}
-              </div>
-              <!-- answers[index] =[] -->
+
+            <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
+              {{ section.instructions }}
+            </div>
+
+            <div v-for="(que, index) in section.questions" :key="que.id">
               <div
-                v-for="(choice, index2) in que.choices"
-                :key="choice.id"
-                class="q-px-xl"
+                class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md"
+                :class="{
+                  'bg-red-1': invalidAnswers.includes(que.id),
+                }"
               >
-                <!-- {{ answers[index][index2] }} -->
-                <q-checkbox
-                  v-model="answers[index][index2]"
-                  dark
-                  :label="que.choices[index2].answer"
+                <p>{{ `${index + 1}) ${que.label}` }}</p>
+
+                <q-option-group
+                  v-model="answers[que.id]"
+                  :options="que.options"
+                  type="checkbox"
                   color="primary"
-                  :true-value="true"
-                  :false-value="false"
-                  keep-color
                 />
-                <!-- {{ que.choices[index2].answer }} -->
               </div>
             </div>
           </div>
@@ -52,39 +51,78 @@
 
 <script>
 import { ref } from 'vue'
-import questions from '../assets/questions.json'
-let questionsFinal = questions[0].questions
+import { useRouter } from 'vue-router'
+
+import section from '../assets/questions/section1.json'
+
+import { useAnswerStore } from 'src/stores/answer'
 
 export default {
   setup() {
-    return {
-      questionsFinal,
-      answers: ref([
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-        [false, false, false, false, false, false, false, false, false],
-      ]),
-      onSubmit() {
-        if (localStorage.getItem('section1Answers')) {
-          localStorage.removeItem('section1Answers')
+    const router = useRouter()
+
+    const answers = ref({})
+    section.questions.forEach(question => {
+      answers.value[question.id] = []
+    })
+
+    const invalidAnswers = ref([])
+
+    const validateAnswers = () => {
+      const invalid = []
+
+      section.questions.forEach(question => {
+        if (answers.value[question.id].length === 0) {
+          invalid.push(question.id)
         }
-        localStorage.setItem('section1Answers', JSON.stringify(this.answers))
-        // console.log(localStorage.getItem("section1Answers"))
-        // console.log(JSON.stringify(this.answers))
-      },
+      })
+
+      invalidAnswers.value = invalid
+
+      if (invalid.length !== 0) {
+        alert('Please answer all questions')
+        return false
+      }
+
+      return true
+    }
+
+    const saveResult = () => {
+      if (!validateAnswers()) {
+        return false
+      }
+
+      const setWiseSum = {}
+
+      section.questions.forEach(question => {
+        setWiseSum[question.id] = answers.value[question.id].length
+      })
+
+      const top3Sets = Object.keys(setWiseSum)
+        .sort((a, b) => setWiseSum[b] - setWiseSum[a])
+        .slice(0, 3)
+
+      const section1result = {
+        answers: answers.value,
+        top3Sets,
+      }
+
+      useAnswerStore().section1 = section1result
+
+      return true
+    }
+
+    const onSubmit = () => {
+      if (saveResult()) {
+        router.push('/section2')
+      }
+    }
+
+    return {
+      section,
+      answers,
+      invalidAnswers,
+      onSubmit,
     }
   },
 }

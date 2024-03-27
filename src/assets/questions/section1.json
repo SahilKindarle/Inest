@@ -1,0 +1,860 @@
+{
+  "instructions": "On the list of questions below, choose the most suitable things you are good at and enjoy doing from the given list in each question.",
+  "questions": [
+    {
+      "id": "8cf3251d-8dbe-473b-bf32-8d7ab9d4e45e",
+      "value": "8cf3251d-8dbe-473b-bf32-8d7ab9d4e45e",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "d1cf856c-71f1-4f12-bfee-cc2712e20aba",
+          "value": "d1cf856c-71f1-4f12-bfee-cc2712e20aba",
+          "label": "Taking care of pets in your neighbourhood"
+        },
+        {
+          "id": "d96ccf21-0f55-4a3b-84c5-d2ac72f62a7e",
+          "value": "d96ccf21-0f55-4a3b-84c5-d2ac72f62a7e",
+          "label": "Moving small trees from one place to another"
+        },
+        {
+          "id": "5b8f3b64-75e4-4120-8fea-b67d123ee74e",
+          "value": "5b8f3b64-75e4-4120-8fea-b67d123ee74e",
+          "label": "Planting and taking care of flowers &amp; plants"
+        },
+        {
+          "id": "bde65823-236a-47dd-b54e-ed8f8e37040e",
+          "value": "bde65823-236a-47dd-b54e-ed8f8e37040e",
+          "label": "Working in a garden &amp; creating new garden"
+        },
+        {
+          "id": "a8d8a230-c620-4958-b756-b83ef97f6554",
+          "value": "a8d8a230-c620-4958-b756-b83ef97f6554",
+          "label": "Taking care of sick animals back to health"
+        },
+        {
+          "id": "3f44bc58-1a4a-401f-9e58-23d35d1e00b9",
+          "value": "3f44bc58-1a4a-401f-9e58-23d35d1e00b9",
+          "label": "Brushing or cleaning dogs, cats, and other pet animals"
+        },
+        {
+          "id": "27e49b21-b6d0-4c82-a726-5993fa4be71a",
+          "value": "27e49b21-b6d0-4c82-a726-5993fa4be71a",
+          "label": "Hiking, trekking & watching wildlife"
+        },
+        {
+          "id": "81be94eb-fb57-44c1-8015-54c1b1b91747",
+          "value": "81be94eb-fb57-44c1-8015-54c1b1b91747",
+          "label": "Chopping & repla woodnting trees"
+        },
+        {
+          "id": "592031ca-04e1-4d9c-86bf-0e04674751a4",
+          "value": "592031ca-04e1-4d9c-86bf-0e04674751a4",
+          "label": "Identifying environmental hazards &amp; sick/dying plants"
+        }
+      ]
+    },
+    {
+      "id": "db5f517e-a3ca-4379-aad2-1bb195265a84",
+      "value": "db5f517e-a3ca-4379-aad2-1bb195265a84",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "a3788b8b-f96e-4a11-9040-fe018bd07b1b",
+          "value": "a3788b8b-f96e-4a11-9040-fe018bd07b1b",
+          "label": "Working in a restaurant"
+        },
+        {
+          "id": "410b4fc7-2595-4324-bbf7-21bcb58d07c7",
+          "value": "410b4fc7-2595-4324-bbf7-21bcb58d07c7",
+          "label": "Planning vacations and other events"
+        },
+        {
+          "id": "af611135-0703-49cb-8c87-9d72329e8033",
+          "value": "af611135-0703-49cb-8c87-9d72329e8033",
+          "label": "Cooking, baking and serving meals"
+        },
+        {
+          "id": "19f8e604-c3ed-432a-9525-6af558e96bc6",
+          "value": "19f8e604-c3ed-432a-9525-6af558e96bc6",
+          "label": "Participating in sports or recreational activities"
+        },
+        {
+          "id": "ed532000-2001-4468-a8cc-1f22330da9ee",
+          "value": "ed532000-2001-4468-a8cc-1f22330da9ee",
+          "label": "Being a lifeguard"
+        },
+        {
+          "id": "fcc630a0-86e3-439d-818a-58293264506e",
+          "value": "fcc630a0-86e3-439d-818a-58293264506e",
+          "label": "Catering an event"
+        },
+        {
+          "id": "ee46e8a4-569d-4428-90cd-0a3ff19d6625",
+          "value": "ee46e8a4-569d-4428-90cd-0a3ff19d6625",
+          "label": "Working at an event or an exhibitions"
+        },
+        {
+          "id": "6068f0b8-97a2-49f6-b84e-4bcaaaa58c68",
+          "value": "6068f0b8-97a2-49f6-b84e-4bcaaaa58c68",
+          "label": "Exercising and working out"
+        },
+        {
+          "id": "ce44cd48-bde0-4a6e-b17b-ab19394dc2ba",
+          "value": "ce44cd48-bde0-4a6e-b17b-ab19394dc2ba",
+          "label": "Officiating a sporting event"
+        }
+      ]
+    },
+    {
+      "id": "8cf3abcb-bcc6-4774-b31b-ca8fc28b776c",
+      "value": "8cf3abcb-bcc6-4774-b31b-ca8fc28b776c",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "3f36f687-1c7e-4613-be9c-dca6b8c2e731",
+          "value": "3f36f687-1c7e-4613-be9c-dca6b8c2e731",
+          "label": "Preparing food at home"
+        },
+        {
+          "id": "4a854486-8433-4f88-a566-62fdb1464552",
+          "value": "4a854486-8433-4f88-a566-62fdb1464552",
+          "label": "Working with the elderly people"
+        },
+        {
+          "id": "c73b07be-8d4b-4bff-af79-705a250c5636",
+          "value": "c73b07be-8d4b-4bff-af79-705a250c5636",
+          "label": "Working at a shelter home"
+        },
+        {
+          "id": "426ffaa8-7289-4152-ab7d-836af58f4618",
+          "value": "426ffaa8-7289-4152-ab7d-836af58f4618",
+          "label": "Shopping, comparing prices &amp; consumer goods"
+        },
+        {
+          "id": "c2f7aed5-8321-4bb1-ba02-c5a0262b6b1b",
+          "value": "c2f7aed5-8321-4bb1-ba02-c5a0262b6b1b",
+          "label": "Listening & helping friends with problems"
+        },
+        {
+          "id": "0679ecd3-c4c9-43df-968c-3732ec6d450e",
+          "value": "0679ecd3-c4c9-43df-968c-3732ec6d450e",
+          "label": "Participating in youth groups or community groups"
+        },
+        {
+          "id": "89ddee79-4e7e-4f51-9302-7d9ca68cb3ee",
+          "value": "89ddee79-4e7e-4f51-9302-7d9ca68cb3ee",
+          "label": "Working as a dietetic aid"
+        },
+        {
+          "id": "db230540-ede5-4064-adf2-9a4e0d2a904a",
+          "value": "db230540-ede5-4064-adf2-9a4e0d2a904a",
+          "label": "Volunteering at a retirement home"
+        },
+        {
+          "id": "8f2993cf-2a83-4acb-9385-ec8800eca219",
+          "value": "8f2993cf-2a83-4acb-9385-ec8800eca219",
+          "label": "Helping your Brother/ Sister"
+        }
+      ]
+    },
+    {
+      "id": "ecc3fdae-ef78-4cf7-bb62-16392a572521",
+      "value": "ecc3fdae-ef78-4cf7-bb62-16392a572521",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "119b621a-c421-4097-bb70-40aa5f33c21e",
+          "value": "119b621a-c421-4097-bb70-40aa5f33c21e",
+          "label": "Developing software programs"
+        },
+        {
+          "id": "60d110c7-adcb-47bb-a78c-88b5ff7b277b",
+          "value": "60d110c7-adcb-47bb-a78c-88b5ff7b277b",
+          "label": "Building computers"
+        },
+        {
+          "id": "d54201e9-2cfb-44d6-a4f0-129f122fc4f0",
+          "value": "d54201e9-2cfb-44d6-a4f0-129f122fc4f0",
+          "label": "Playing video games"
+        },
+        {
+          "id": "46e17262-b824-463a-a3a8-f41f212b9ca4",
+          "value": "46e17262-b824-463a-a3a8-f41f212b9ca4",
+          "label": "Surfing the Internet"
+        },
+        {
+          "id": "0cb907aa-8b79-4b53-ac4d-40a6363a551d",
+          "value": "0cb907aa-8b79-4b53-ac4d-40a6363a551d",
+          "label": "Learning how to configure operating systems"
+        },
+        {
+          "id": "51e7cbd4-8e5d-4c00-b576-26339f17a528",
+          "value": "51e7cbd4-8e5d-4c00-b576-26339f17a528",
+          "label": "Installing software"
+        },
+        {
+          "id": "b31672e4-6d89-47f1-b17c-3b353af23769",
+          "value": "b31672e4-6d89-47f1-b17c-3b353af23769",
+          "label": "Learning how to assemble computer hardware"
+        },
+        {
+          "id": "1d5bc722-a5f9-4844-a52a-b40c5fd53b5c",
+          "value": "1d5bc722-a5f9-4844-a52a-b40c5fd53b5c",
+          "label": "Playing with electronic gadgets"
+        },
+        {
+          "id": "64d60aab-852d-4e77-a32a-36d8bac0d309",
+          "value": "64d60aab-852d-4e77-a32a-36d8bac0d309",
+          "label": "Designing video games"
+        }
+      ]
+    },
+    {
+      "id": "311f0c34-cc25-4688-b334-4df520f44cb3",
+      "value": "311f0c34-cc25-4688-b334-4df520f44cb3",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "30979b77-e89e-412a-9608-3a62f00159b8",
+          "value": "30979b77-e89e-412a-9608-3a62f00159b8",
+          "label": "Reading mystery novels"
+        },
+        {
+          "id": "b0568198-823d-45dc-bc8e-cabe9a2ad00c",
+          "value": "b0568198-823d-45dc-bc8e-cabe9a2ad00c",
+          "label": "Listening to a police stories"
+        },
+        {
+          "id": "2d1af9f8-8ab8-41ad-b5bb-35803277bb89",
+          "value": "2d1af9f8-8ab8-41ad-b5bb-35803277bb89",
+          "label": "Watching mystery movies or courtroom dramas"
+        },
+        {
+          "id": "b2ccad72-2ef6-4907-9446-52f92d29ba6d",
+          "value": "b2ccad72-2ef6-4907-9446-52f92d29ba6d",
+          "label": "Playing mystery or adventurous games"
+        },
+        {
+          "id": "5fe7c4a1-dc76-4024-92c5-a8251e8ac0f7",
+          "value": "5fe7c4a1-dc76-4024-92c5-a8251e8ac0f7",
+          "label": "Working in a lawyer's office"
+        },
+        {
+          "id": "e7f40148-f9fd-41d7-be6c-e9a4640949af",
+          "value": "e7f40148-f9fd-41d7-be6c-e9a4640949af",
+          "label": "Following court cases in the news"
+        },
+        {
+          "id": "118d8880-ec03-4724-b780-1aea4ff40c3e",
+          "value": "118d8880-ec03-4724-b780-1aea4ff40c3e",
+          "label": "Participating in criminal investigation training"
+        },
+        {
+          "id": "35a201df-5980-433e-8f72-35a6a9d1781f",
+          "value": "35a201df-5980-433e-8f72-35a6a9d1781f",
+          "label": "Volunteering to search for missing pets or persons"
+        },
+        {
+          "id": "5dc07c2b-0d38-43d3-91e0-3dbc62e972d6",
+          "value": "5dc07c2b-0d38-43d3-91e0-3dbc62e972d6",
+          "label": "Participating in search and/or rescue training"
+        }
+      ]
+    },
+    {
+      "id": "502c3a81-996e-4eaf-9a37-b1279e28bb93",
+      "value": "502c3a81-996e-4eaf-9a37-b1279e28bb93",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "c535c329-a5ea-494a-8689-0952abbe7f04",
+          "value": "c535c329-a5ea-494a-8689-0952abbe7f04",
+          "label": "Welding or working with metals"
+        },
+        {
+          "id": "cad13614-72fe-4b8b-b356-8255818812da",
+          "value": "cad13614-72fe-4b8b-b356-8255818812da",
+          "label": "Repairing and upholstering furniture"
+        },
+        {
+          "id": "3a60fff6-86d9-438a-9794-f5f7e8cb4f06",
+          "value": "3a60fff6-86d9-438a-9794-f5f7e8cb4f06",
+          "label": "Creating wood carvings"
+        },
+        {
+          "id": "757ebb4f-7603-410f-8053-b4dc5ee999e1",
+          "value": "757ebb4f-7603-410f-8053-b4dc5ee999e1",
+          "label": "Taking mechanical training"
+        },
+        {
+          "id": "d081abb5-9c3d-44af-88b2-763fbcac58e3",
+          "value": "d081abb5-9c3d-44af-88b2-763fbcac58e3",
+          "label": "Making belts or other leather goods"
+        },
+        {
+          "id": "5d69fde5-72a0-4bbe-a0ef-867a237b6a0d",
+          "value": "5d69fde5-72a0-4bbe-a0ef-867a237b6a0d",
+          "label": "Operating a printing press"
+        },
+        {
+          "id": "074aa66a-8996-48cc-ac87-f33342f6f8f9",
+          "value": "074aa66a-8996-48cc-ac87-f33342f6f8f9",
+          "label": "Installing and repairing home electronics"
+        },
+        {
+          "id": "29501134-eee4-4424-836e-0312779e1c50",
+          "value": "29501134-eee4-4424-836e-0312779e1c50",
+          "label": "Sewing, weaving, knitting or other needlework"
+        },
+        {
+          "id": "e51d7f82-21d7-4ed0-a2bd-9247577443be",
+          "value": "e51d7f82-21d7-4ed0-a2bd-9247577443be",
+          "label": "Building cabinets, shelves and other woodworks"
+        }
+      ]
+    },
+    {
+      "id": "01c81eaf-9c69-4ea5-aa04-0358769267bc",
+      "value": "01c81eaf-9c69-4ea5-aa04-0358769267bc",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "1c106553-b553-4785-8e83-d73a9b40eab4",
+          "value": "1c106553-b553-4785-8e83-d73a9b40eab4",
+          "label": "Cutting & styling hair"
+        },
+        {
+          "id": "4c4ef538-c76a-4523-9204-2845eea4228c",
+          "value": "4c4ef538-c76a-4523-9204-2845eea4228c",
+          "label": "Selling products for a school fund-raiser"
+        },
+        {
+          "id": "002dc122-05b0-4686-9b52-89092bf4390a",
+          "value": "002dc122-05b0-4686-9b52-89092bf4390a",
+          "label": "Taking tours of new houses for sale"
+        },
+        {
+          "id": "236957e7-8477-4db0-94c6-5335d8a2c116",
+          "value": "236957e7-8477-4db0-94c6-5335d8a2c116",
+          "label": "Designing or modelling clothes"
+        },
+        {
+          "id": "f07e2a1e-10da-4923-b32c-fc7797da67f4",
+          "value": "f07e2a1e-10da-4923-b32c-fc7797da67f4",
+          "label": "Giving people advice on products they should buy"
+        },
+        {
+          "id": "43ac86fd-f557-47d8-b11a-f01825106056",
+          "value": "43ac86fd-f557-47d8-b11a-f01825106056",
+          "label": "Decorating your house and rearranging your furniture"
+        },
+        {
+          "id": "164a9f90-cc42-4afd-9d88-2f0c064a518f",
+          "value": "164a9f90-cc42-4afd-9d88-2f0c064a518f",
+          "label": "Planning and having a yard sale"
+        },
+        {
+          "id": "6ad595d9-d9f6-4560-a5be-49640032c67a",
+          "value": "6ad595d9-d9f6-4560-a5be-49640032c67a",
+          "label": "Arranging and selling flowers"
+        },
+        {
+          "id": "f9927f6b-febd-449f-90c4-9d026e0159ab",
+          "value": "f9927f6b-febd-449f-90c4-9d026e0159ab",
+          "label": "Fixing watches and clocks"
+        }
+      ]
+    },
+    {
+      "id": "2d46b6a9-68e5-4177-ae29-df14f5faaa81",
+      "value": "2d46b6a9-68e5-4177-ae29-df14f5faaa81",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+
+      "options": [
+        {
+          "id": "396fd295-6066-40c8-a6f7-67183361e063",
+          "value": "396fd295-6066-40c8-a6f7-67183361e063",
+          "label": "Visiting science museums"
+        },
+        {
+          "id": "f64d081f-627d-4f41-8e28-ecda2cd778bb",
+          "value": "f64d081f-627d-4f41-8e28-ecda2cd778bb",
+          "label": "Designing experiments"
+        },
+        {
+          "id": "06243138-4242-474c-8893-6f5a330f7e02",
+          "value": "06243138-4242-474c-8893-6f5a330f7e02",
+          "label": "Exploring caves and collecting rocks"
+        },
+        {
+          "id": "ee5d30ba-eaf8-4446-9687-e51804e39f61",
+          "value": "ee5d30ba-eaf8-4446-9687-e51804e39f61",
+          "label": "Watching the weather and tracking storms"
+        },
+        {
+          "id": "66cd3a56-2dda-4cdb-a64a-f24541792ccb",
+          "value": "66cd3a56-2dda-4cdb-a64a-f24541792ccb",
+          "label": "Using a computer to solve math problems and equations"
+        },
+        {
+          "id": "5a2a2d1f-9d25-4b08-981c-55f7af4a0020",
+          "value": "5a2a2d1f-9d25-4b08-981c-55f7af4a0020",
+          "label": "Identifying plants, animals and/or marine life"
+        },
+        {
+          "id": "a0a440ac-bb3f-46a8-9cd3-30c7f54d1a0c",
+          "value": "a0a440ac-bb3f-46a8-9cd3-30c7f54d1a0c",
+          "label": "Developing solutions to environmental problems"
+        },
+        {
+          "id": "ad2ca57e-dc4d-4d74-9fc8-2c30d2a729a7",
+          "value": "ad2ca57e-dc4d-4d74-9fc8-2c30d2a729a7",
+          "label": "Building model aircraft/boats/trains"
+        },
+        {
+          "id": "28a5e74d-2b8f-4b64-a4af-e47149955647",
+          "value": "28a5e74d-2b8f-4b64-a4af-e47149955647",
+          "label": "Learning about different cultures"
+        }
+      ]
+    },
+    {
+      "id": "38ae1f6b-6de2-4e33-9671-f57e5d43e0cb",
+      "value": "38ae1f6b-6de2-4e33-9671-f57e5d43e0cb",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "a51c4fb1-e23b-4325-b830-dc0d27bed82c",
+          "value": "a51c4fb1-e23b-4325-b830-dc0d27bed82c",
+          "label": "Flying airplanes"
+        },
+        {
+          "id": "045d3c8b-4f61-49ef-8635-30731c92f48d",
+          "value": "045d3c8b-4f61-49ef-8635-30731c92f48d",
+          "label": "Repairing vehicles, bikes and engines"
+        },
+        {
+          "id": "8bbe9820-0eb5-408a-8c6a-a10414d591de",
+          "value": "8bbe9820-0eb5-408a-8c6a-a10414d591de",
+          "label": "Working in a warehouse or taking inventory"
+        },
+        {
+          "id": "92cf53c6-5e36-4515-a39d-1aa09997285b",
+          "value": "92cf53c6-5e36-4515-a39d-1aa09997285b",
+          "label": "Operating motorized machines or equipment"
+        },
+        {
+          "id": "05a5dbb9-3760-454d-af22-8bff539cb140",
+          "value": "05a5dbb9-3760-454d-af22-8bff539cb140",
+          "label": "Visiting space camps"
+        },
+        {
+          "id": "2ff4a06c-9e92-4380-b386-e5c95f89663a",
+          "value": "2ff4a06c-9e92-4380-b386-e5c95f89663a",
+          "label": "Building and repairing boats"
+        },
+        {
+          "id": "aa3363dc-241c-42be-8ae3-90ae7f12bd3c",
+          "value": "aa3363dc-241c-42be-8ae3-90ae7f12bd3c",
+          "label": "Operating a radio or television broadcast"
+        },
+        {
+          "id": "e3de1616-0d24-4786-8694-904b86d917ac",
+          "value": "e3de1616-0d24-4786-8694-904b86d917ac",
+          "label": "Reading mechanical and automotive magazines/blogs"
+        },
+        {
+          "id": "48d7d8e0-9f3c-4cc3-b9e4-6abc44931267",
+          "value": "48d7d8e0-9f3c-4cc3-b9e4-6abc44931267",
+          "label": "Having a paper route"
+        }
+      ]
+    },
+    {
+      "id": "99819749-9cb9-471e-9eb4-6c4012674470",
+      "value": "99819749-9cb9-471e-9eb4-6c4012674470",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "6dce726b-74a5-421b-b951-5cbb886be59c",
+          "value": "6dce726b-74a5-421b-b951-5cbb886be59c",
+          "label": "Repairing small appliances"
+        },
+        {
+          "id": "b4bb771e-516d-4dbb-874e-5bb4d680fc2a",
+          "value": "b4bb771e-516d-4dbb-874e-5bb4d680fc2a",
+          "label": "Painting houses or buildings"
+        },
+        {
+          "id": "e6425223-79cb-49ba-8c18-bf8afa2fb8dc",
+          "value": "e6425223-79cb-49ba-8c18-bf8afa2fb8dc",
+          "label": "Using tools to make household repairs"
+        },
+        {
+          "id": "cf48479b-484c-40d1-a20f-7302ccb19129",
+          "value": "cf48479b-484c-40d1-a20f-7302ccb19129",
+          "label": "Cutting and shaping wood to build structures"
+        },
+        {
+          "id": "94c148fe-70f6-41b1-b0e8-fea0ccd3fc8b",
+          "value": "94c148fe-70f6-41b1-b0e8-fea0ccd3fc8b",
+          "label": "Volunteering for community work or social work"
+        },
+        {
+          "id": "7761bd98-6de2-41ad-98da-6988b2a59c0f",
+          "value": "7761bd98-6de2-41ad-98da-6988b2a59c0f",
+          "label": "Drawing floor plans"
+        },
+        {
+          "id": "cb84f054-718b-4b0e-95ff-31fba3170ec4",
+          "value": "cb84f054-718b-4b0e-95ff-31fba3170ec4",
+          "label": "Building simple electronic circuit boards"
+        },
+        {
+          "id": "af76fad4-7164-4080-bab5-d77774c811a2",
+          "value": "af76fad4-7164-4080-bab5-d77774c811a2",
+          "label": "Laying brick or constructing walls"
+        },
+        {
+          "id": "ba2062e4-e25a-4260-b72c-e562ca50fdf6",
+          "value": "ba2062e4-e25a-4260-b72c-e562ca50fdf6",
+          "label": "Maintaining Gardens and planting flower Gardens"
+        }
+      ]
+    },
+    {
+      "id": "276ed9fd-1175-4f82-a042-f0940d8f2cbe",
+      "value": "276ed9fd-1175-4f82-a042-f0940d8f2cbe",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "8a79c6f1-2c37-462b-a547-203e97eb6a1c",
+          "value": "8a79c6f1-2c37-462b-a547-203e97eb6a1c",
+          "label": "Performing (music, drama, dance) for an audience"
+        },
+        {
+          "id": "10cbf536-9324-4801-abbd-946dd7489fa8",
+          "value": "10cbf536-9324-4801-abbd-946dd7489fa8",
+          "label": "Creating graphic designs on a computer"
+        },
+        {
+          "id": "1b1a1b7f-eae2-43a3-9845-fcba54616a5d",
+          "value": "1b1a1b7f-eae2-43a3-9845-fcba54616a5d",
+          "label": "Creating an original video or film"
+        },
+        {
+          "id": "207b07c1-8f35-4e22-b0bd-bd053a7f10d2",
+          "value": "207b07c1-8f35-4e22-b0bd-bd053a7f10d2",
+          "label": "Sketching or painting pictures"
+        },
+        {
+          "id": "fc8aca1c-11ec-4daa-ae1c-4e0ced581d0e",
+          "value": "fc8aca1c-11ec-4daa-ae1c-4e0ced581d0e",
+          "label": "Taking photographs"
+        },
+        {
+          "id": "1150feaa-2009-47cb-8938-239a424a457c",
+          "value": "1150feaa-2009-47cb-8938-239a424a457c",
+          "label": "Writing poems, stories or plays"
+        },
+        {
+          "id": "6a2c025f-c35f-400f-a734-e73ca05fffe5",
+          "value": "6a2c025f-c35f-400f-a734-e73ca05fffe5",
+          "label": "Making jewellery, sculpture, ceramics or stained glass"
+        },
+        {
+          "id": "8b097ab2-0106-4965-81f4-5b44a7d2e692",
+          "value": "8b097ab2-0106-4965-81f4-5b44a7d2e692",
+          "label": "Designing a newspaper layout (artwork)"
+        },
+        {
+          "id": "d335e744-85e0-4fd2-b042-cc6e45808ad9",
+          "value": "d335e744-85e0-4fd2-b042-cc6e45808ad9",
+          "label": "Being an announcer or Radio Jockey for an amateur radio station"
+        }
+      ]
+    },
+    {
+      "id": "1cb45bd4-16c3-436f-af38-0c2800b024c5",
+      "value": "1cb45bd4-16c3-436f-af38-0c2800b024c5",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "0262525d-2265-4f30-ac9d-0e622a180d70",
+          "value": "0262525d-2265-4f30-ac9d-0e622a180d70",
+          "label": "Using a cash register"
+        },
+        {
+          "id": "6c71e88d-2c3f-4f1b-b9d9-c9f17d230221",
+          "value": "6c71e88d-2c3f-4f1b-b9d9-c9f17d230221",
+          "label": "Typing minutes of any meeting"
+        },
+        {
+          "id": "4ec210fc-2575-4dd3-8a0c-c5a33e1c82d1",
+          "value": "4ec210fc-2575-4dd3-8a0c-c5a33e1c82d1",
+          "label": "Filing or sorting letters, mail or other papers"
+        },
+        {
+          "id": "a7f07c7e-1b5c-40de-a144-aba0c3c47a89",
+          "value": "a7f07c7e-1b5c-40de-a144-aba0c3c47a89",
+          "label": "Running your own business"
+        },
+        {
+          "id": "4ac59d16-f2d0-4c26-83c6-2e4e09b8da94",
+          "value": "4ac59d16-f2d0-4c26-83c6-2e4e09b8da94",
+          "label": "Developing Web pages and creating print layouts"
+        },
+        {
+          "id": "f3aadd13-7129-4c33-921d-bb676b77e169",
+          "value": "f3aadd13-7129-4c33-921d-bb676b77e169",
+          "label": "Managing tasks for a group"
+        },
+        {
+          "id": "644217bf-bd39-4a0e-9fb5-d147a9ad98e8",
+          "value": "644217bf-bd39-4a0e-9fb5-d147a9ad98e8",
+          "label": "Preparing reports and analysing data"
+        },
+        {
+          "id": "42a6bdb2-5280-4f66-b279-cdf3ba1b251c",
+          "value": "42a6bdb2-5280-4f66-b279-cdf3ba1b251c",
+          "label": "Typing documents for other people"
+        },
+        {
+          "id": "d1ed7d17-f838-4472-9756-4b1a7edcf6c0",
+          "value": "d1ed7d17-f838-4472-9756-4b1a7edcf6c0",
+          "label": "Jobs that involve answering phone calls"
+        }
+      ]
+    },
+    {
+      "id": "46918820-52c1-4380-9913-2a0c846c33d6",
+      "value": "46918820-52c1-4380-9913-2a0c846c33d6",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "cd4f00c5-5529-4b19-bc5e-6b50ae77ff7a",
+          "value": "cd4f00c5-5529-4b19-bc5e-6b50ae77ff7a",
+          "label": "Working as a counsellor or volunteer"
+        },
+        {
+          "id": "e6d5e34a-e4c6-49e7-abb7-b8349e4d85e8",
+          "value": "e6d5e34a-e4c6-49e7-abb7-b8349e4d85e8",
+          "label": "Tutoring young children"
+        },
+        {
+          "id": "f6d42fa7-aa3b-4fe6-88ae-29d9277f8676",
+          "value": "f6d42fa7-aa3b-4fe6-88ae-29d9277f8676",
+          "label": "Helping students with disability"
+        },
+        {
+          "id": "09d5f459-1f2e-4181-95ef-39f5332cffaf",
+          "value": "09d5f459-1f2e-4181-95ef-39f5332cffaf",
+          "label": "Giving instructions for/or directing a play"
+        },
+        {
+          "id": "248e9d5f-1c8b-42ad-8bdc-c0b5be425bde",
+          "value": "248e9d5f-1c8b-42ad-8bdc-c0b5be425bde",
+          "label": "Baby-sitting young children"
+        },
+        {
+          "id": "f19f0a89-95d0-4b0c-a286-8d0bb5ce0976",
+          "value": "f19f0a89-95d0-4b0c-a286-8d0bb5ce0976",
+          "label": "Organizing and shelving library books"
+        },
+        {
+          "id": "edac2ef0-d0b4-44eb-915a-dc8709895edf",
+          "value": "edac2ef0-d0b4-44eb-915a-dc8709895edf",
+          "label": "counselling your friends or being a mediator"
+        },
+        {
+          "id": "6ab1f7bb-2bbd-40bf-869f-6cb3c2ea7c45",
+          "value": "6ab1f7bb-2bbd-40bf-869f-6cb3c2ea7c45",
+          "label": "Helping at Sports events for differently abled people"
+        },
+        {
+          "id": "4b9099e6-df2f-42f0-b8b8-165792e1f368",
+          "value": "4b9099e6-df2f-42f0-b8b8-165792e1f368",
+          "label": "Teaching young children in an after-school program"
+        }
+      ]
+    },
+    {
+      "id": "bf499f50-54a9-4ebd-be9f-7f6b68a43697",
+      "value": "bf499f50-54a9-4ebd-be9f-7f6b68a43697",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "b458a2c1-4a5b-4c0d-8461-48b6da1d2949",
+          "value": "b458a2c1-4a5b-4c0d-8461-48b6da1d2949",
+          "label": "Planning a mock stock market game"
+        },
+        {
+          "id": "6315b235-99fc-43fa-8997-f9e1079bb19e",
+          "value": "6315b235-99fc-43fa-8997-f9e1079bb19e",
+          "label": "Investing money and studying investments"
+        },
+        {
+          "id": "91854060-b016-49dd-b090-0bec27a3deb7",
+          "value": "91854060-b016-49dd-b090-0bec27a3deb7",
+          "label": "Balancing a check book"
+        },
+        {
+          "id": "8f73ff51-5d92-4d2e-9bae-a64f9df30b91",
+          "value": "8f73ff51-5d92-4d2e-9bae-a64f9df30b91",
+          "label": "Opening a savings/current account"
+        },
+        {
+          "id": "eb81214d-042a-4951-9eac-1d734f57999b",
+          "value": "eb81214d-042a-4951-9eac-1d734f57999b",
+          "label": "Being a treasurer for a school or college club"
+        },
+        {
+          "id": "56363035-9711-4f32-8314-cddf11ed5e79",
+          "value": "56363035-9711-4f32-8314-cddf11ed5e79",
+          "label": "Organizing a fund-raising event"
+        },
+        {
+          "id": "11f4d158-28a4-4788-9af3-eef9ee193cd0",
+          "value": "11f4d158-28a4-4788-9af3-eef9ee193cd0",
+          "label": "Collecting money for a school or community event"
+        },
+        {
+          "id": "0dca9d16-57af-4dc1-ae4e-6b48278c7ddc",
+          "value": "0dca9d16-57af-4dc1-ae4e-6b48278c7ddc",
+          "label": "Developing a budget"
+        },
+        {
+          "id": "da5a1971-1c54-4c48-804f-f4c806aceeab",
+          "value": "da5a1971-1c54-4c48-804f-f4c806aceeab",
+          "label": "Using spreadsheets and financial computer programs"
+        }
+      ]
+    },
+    {
+      "id": "f0ab50a6-17c4-43df-81c5-d97447bf123a",
+      "value": "f0ab50a6-17c4-43df-81c5-d97447bf123a",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "ca99f888-bdb0-458f-8f57-1be11020184d",
+          "value": "ca99f888-bdb0-458f-8f57-1be11020184d",
+          "label": "Campaigning for a political candidate"
+        },
+        {
+          "id": "62361e29-9e7c-4a05-b936-5fbbf8090c37",
+          "value": "62361e29-9e7c-4a05-b936-5fbbf8090c37",
+          "label": "Making political speeches"
+        },
+        {
+          "id": "c458621e-0d1d-4c87-a3e1-cbd8c5bc44f6",
+          "value": "c458621e-0d1d-4c87-a3e1-cbd8c5bc44f6",
+          "label": "Getting involved in planning and implementing of projects"
+        },
+        {
+          "id": "8f0a01d2-ca95-45c5-a069-bfbcc0796a6f",
+          "value": "8f0a01d2-ca95-45c5-a069-bfbcc0796a6f",
+          "label": "Interested in becoming a class leader or class rep."
+        },
+        {
+          "id": "300907fd-2911-4336-b1a1-541b1e13e289",
+          "value": "300907fd-2911-4336-b1a1-541b1e13e289",
+          "label": "Planning and preparing budgets"
+        },
+        {
+          "id": "9eebdaf1-bf23-4c65-b41d-a5653bbd2265",
+          "value": "9eebdaf1-bf23-4c65-b41d-a5653bbd2265",
+          "label": "Participating in a debate"
+        },
+        {
+          "id": "7df04c85-c78e-444c-879d-c0928327eff8",
+          "value": "7df04c85-c78e-444c-879d-c0928327eff8",
+          "label": "Volunteering as a legislative aide"
+        },
+        {
+          "id": "08bc930c-050a-4af6-9eb5-4fb89d05993e",
+          "value": "08bc930c-050a-4af6-9eb5-4fb89d05993e",
+          "label": "Learning and speaking a foreign language"
+        },
+        {
+          "id": "3cab0b58-e98c-44aa-a318-802e2b1b400b",
+          "value": "3cab0b58-e98c-44aa-a318-802e2b1b400b",
+          "label": "Researching and writing grants"
+        }
+      ]
+    },
+    {
+      "id": "c0e5ffa5-67cf-4c2a-8807-fb69c016d4b7",
+      "value": "c0e5ffa5-67cf-4c2a-8807-fb69c016d4b7",
+      "label": "Select your preferred skills and activities from the provided options.",
+      "description": "(Select as many as you like)",
+      "options": [
+        {
+          "id": "2b11d794-58c2-4d9f-befc-ba1a76ff28e8",
+          "value": "2b11d794-58c2-4d9f-befc-ba1a76ff28e8",
+          "label": "Taking care of a sick relative"
+        },
+        {
+          "id": "5b82a94b-0a07-4817-8958-8251908267a9",
+          "value": "5b82a94b-0a07-4817-8958-8251908267a9",
+          "label": "Watching doctor/hospital shows on TV"
+        },
+        {
+          "id": "2854af58-8320-4702-a6ee-cdd0a7738fc5",
+          "value": "2854af58-8320-4702-a6ee-cdd0a7738fc5",
+          "label": "Learning first aid and CPR"
+        },
+        {
+          "id": "b9f20b93-1e68-486e-aea1-c03b5fb0c2f3",
+          "value": "b9f20b93-1e68-486e-aea1-c03b5fb0c2f3",
+          "label": "Volunteering at a retirement or an old age home"
+        },
+        {
+          "id": "438a5b20-c737-4f21-a826-bbad1ab8f8be",
+          "value": "438a5b20-c737-4f21-a826-bbad1ab8f8be",
+          "label": "Volunteering as a hospital aide"
+        },
+        {
+          "id": "c546889b-ae52-488d-bdec-8d1f712ddb1c",
+          "value": "c546889b-ae52-488d-bdec-8d1f712ddb1c",
+          "label": "Using a stethoscope to listen to someon's heart"
+        },
+        {
+          "id": "47c90909-548b-47b5-ba5d-ab0117e3faaa",
+          "value": "47c90909-548b-47b5-ba5d-ab0117e3faaa",
+          "label": "Identifying human body parts from a diagram"
+        },
+        {
+          "id": "a5969faa-8df2-45e9-8074-b23563382b36",
+          "value": "a5969faa-8df2-45e9-8074-b23563382b36",
+          "label": "Bandaging sports injuries with a trainer's help"
+        },
+        {
+          "id": "9f12fa22-f02e-40a7-abc7-42c2033d3654",
+          "value": "9f12fa22-f02e-40a7-abc7-42c2033d3654",
+          "label": "Assisting persons in wheelchairs with daily tasks"
+        }
+      ]
+    }
+  ]
+}

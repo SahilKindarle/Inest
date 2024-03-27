@@ -13,10 +13,10 @@
             </div>
 
             <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-              {{ questions.instructions }}
+              {{ section.instructions }}
             </div>
 
-            <div v-for="(que, index) in questions.questions" :key="que.id">
+            <div v-for="(que, index) in section.questions" :key="que.id">
               <div
                 class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md"
                 :class="{
@@ -31,15 +31,6 @@
                   type="radio"
                   color="primary"
                 />
-                <!-- <template v-for="opt in que.options" :key="opt.val">
-                  <q-radio
-                    v-model=""
-                    :val="opt.val"
-                    :label="opt.label"
-                    color="primary"
-                  />
-                  <br />
-                </template> -->
               </div>
             </div>
           </div>
@@ -64,7 +55,7 @@
 import { ref } from 'vue'
 // import { useRouter } from 'vue-router'
 
-import questions from '../assets/sectionFive.json'
+import section from '../assets/questions/section5.json'
 
 import { useAnswerStore } from 'src/stores/answer'
 
@@ -80,7 +71,7 @@ export default {
     // const router = useRouter()
 
     const answers = ref([])
-    answers.value = Array(questions.questions.length).fill('')
+    answers.value = Array(section.questions.length).fill('')
 
     const invalidAnswers = ref([])
 
@@ -92,7 +83,7 @@ export default {
       if (!isAllAnswered) {
         answers.value.forEach((a, i) => {
           if (a === '') {
-            invalidAnswers.value.push(questions.questions[i].id)
+            invalidAnswers.value.push(section.questions[i].id)
           }
         })
 
@@ -108,7 +99,7 @@ export default {
 
       const answersWithQId = {}
 
-      questions.questions.forEach((q, i) => {
+      section.questions.forEach((q, i) => {
         answersWithQId[`q${q.id}`] = answers.value[i]
       })
 
@@ -135,7 +126,7 @@ export default {
     }
 
     return {
-      questions,
+      section,
       answers,
       invalidAnswers,
       onSubmit,
