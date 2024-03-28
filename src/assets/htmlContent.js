@@ -128,3 +128,26 @@ let yourSkillScore = `
 </div>
 </div>
 `
+
+let skillProficiencySection = `
+<div class="content">
+<h4>Your Skill Proficiency Level -- ${secTwo.overall.title}</h4>
+<p style="margin-top: 1rem;">${secTwo.overall.description}</p>
+<ul style="padding-left: 3rem; margin-top: 1rem;">
+${secTwo.overall.points.map(point => `<li>${point}</li>`).join('')}
+</ul>
+<br>
+<br>
+
+<h4>Your Emotional Quotient</h4>
+
+<h2 style="text-align: end;">YOUR SCORE - ${secThree.score}</h2>
+<br>
+<p style="margin-top: 1rem;">${secTwo.description}</p>
+<div class="emotianal-details">
+${secThree.points.map(point => `<p>${point}</p>`)}
+</div>
+
+<h4 style="margin-bottom: 12px; margin-top: 2rem">Your Best Suitable Profession</h4>
+<br>
+</div>`
