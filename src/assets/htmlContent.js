@@ -59,13 +59,13 @@ let yourSkillScore = `
 
 <div class="skills-information">
 <div class="skills-score">
-<p>Verbal Skills: <span>${secTwo[0].percentage}%</span> </p>
-<p>Numeric Skills: <span>${secTwo[1].percentage}%</span> </p>
-<p>People Skills: <span>${secTwo[2].percentage}%</span> </p>
-<p>Adaptive Skills: <span>${secTwo[3].percentage}%</span> </p>
-<p>Analytical Skills: <span>${secTwo[4].percentage}%</span> </p>
-<p>Writing Skills: <span>${secTwo[5].percentage}%</span> </p>
-<p>Time Management Skills: <span>${secTwo[6].percentage}%</span> </p>
+<p>Verbal Skills: <span>${secTwo['Verbal Skills'].percentage}%</span> </p>
+<p>Numeric Skills: <span>${secTwo['Numeric Skills'].percentage}%</span> </p>
+<p>People Skills: <span>${secTwo['People Skills'].percentage}%</span> </p>
+<p>Adaptive Skills: <span>${secTwo['Adaptive Skills'].percentage}%</span> </p>
+<p>Analytical Skills: <span>${secTwo['Analytical Skills'].percentage}%</span> </p>
+<p>Writing Skills: <span>${secTwo['Writing Skills'].percentage}%</span> </p>
+<p>Time Management Skills: <span>${secTwo['Time Management Skills'].percentage}%</span> </p>
 </div>
 <div class="skill-score">
     <div class="graph">
@@ -110,19 +110,19 @@ let yourSkillScore = `
                 </div>
             </div>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[0].percentage}%;"></progress>
+                style="max-width: ${secTwo['Verbal Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[1].percentage}%;"></progress>
+                style="max-width: ${secTwo['Numeric Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[2].percentage}%;"></progress>
+                style="max-width: ${secTwo['People Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[3].percentage}%;"></progress>
+                style="max-width: ${secTwo['Adaptive Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[4].percentage}%;"></progress>
+                style="max-width: ${secTwo['Analytical Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[5].percentage}%;"></progress>
+                style="max-width: ${secTwo['Writing Skills'].percentage}%;"></progress>
             <progress class="graph-indicator" id="file" value="100" max="100"
-                style="max-width: ${secTwo[6].percentage}%;"></progress>
+                style="max-width: ${secTwo['Time Management Skills'].percentage}%;"></progress>
         </div>
     </div>
 </div>
