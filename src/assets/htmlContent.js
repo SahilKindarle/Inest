@@ -147,7 +147,28 @@ ${secTwo.overall.points.map(point => `<li>${point}</li>`).join('')}
 <div class="emotianal-details">
 ${secThree.points.map(point => `<p>${point}</p>`)}
 </div>
-
-<h4 style="margin-bottom: 12px; margin-top: 2rem">Your Best Suitable Profession</h4>
-<br>
 </div>`
+
+let yourSuitableProfession = `
+<h4 style="margin-bottom: 12px; margin-top: 2rem">Your Best Suitable Profession</h4>
+                  <br>
+                  {{!-- <div class="grid-container">
+                      ${secOne
+                        ?.map(
+                          (item, i) =>
+                            `<div>
+                              <p style="text-align: center;"><strong>Option - 0${
+                                i + 1
+                              }</strong></p>
+                              <p class="title">${item.title}</p>
+                              <p class="desc">${item.description}</p>
+                              <ol>
+                              ${item.sectors
+                                .map(sector => `<li>${sector}</li>`)
+                                .join('')}
+                              </ol>
+                          </div>`
+                        )
+                        .join('')}
+                  </div> --}}
+              </div>`
