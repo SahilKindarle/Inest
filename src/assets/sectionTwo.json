@@ -6,8 +6,7 @@
     Experiment with different techniques and concepts within the skill.
     Keep a detailed record of your progress and achievements.
     Seek feedback from peers or mentors to identify areas for improvement.
-    Attend workshops, training sessions, or online courses to deepen your understanding",
-    "percentage": "40%"
+    Attend workshops, training sessions, or online courses to deepen your understanding","percentage": "40%"
   },
   {
     "title": "Intermediate",
@@ -20,5 +19,29 @@
       "Take on challenging tasks or projects to expand your knowledge and capabilities"
     ],
     "percentage": "40%"
+  },
+  {
+    "title": "Advanced",
+    "description": "At the advanced level, you have attained a high level of proficiency in the skill. You can execute tasks associated with this competency with confidence and minimal assistance. Your expertise is recognized within your organization, and you're often sought out for advice or guidance on related matters. Beyond simply performing tasks, your focus extends to understanding the broader organizational or professional implications of this skill. You actively contribute to discussions at a senior level and may play a role in shaping policies or procedures within this area.",
+    "points": [
+      "Mentor others who are at lower proficiency levels to solidify your own understanding.",
+      "Stay updated on industry trends and best practices within the skill domain.",
+      "Seek out leadership opportunities within projects or initiatives related to the skill.",
+      "Share your expertise through presentations, articles, or workshops.",
+      "Network with other professionals in the field to exchange knowledge and insights."
+    ],
+    "percentage": "60%"
+  },
+  {
+    "title": "Expert",
+    "description": "As an expert, you are considered a master in this field. Your proficiency level is exceptional, and you are widely acknowledged for your expertise. You possess a deep understanding of the skill and its applications, allowing you to provide guidance, troubleshoot complex issues, and innovate within this area. Your expertise goes beyond individual tasks; you contribute to strategic decision-making and may lead initiatives or projects related to this skill. Others within your organization and possibly in external networks look to you as a leader and authority in this domain. Your ability to articulate complex concepts and processes in a clear and concise manner facilitates understanding and collaboration among colleagues and stakeholders.",
+    "points": [
+      "Continuously push the boundaries of your expertise by exploring new applications or techniques.",
+      "Serve as a mentor or coach to develop talent within your organization or community.",
+      "Contribute to thought leadership by publishing research or thought pieces.",
+      "Actively participate in professional organizations or committees related to the skill.",
+      "Collaborate with other experts to tackle complex challenges or drive innovation within the field."
+    ],
+    "percentage": "80%"
   }
 ]
