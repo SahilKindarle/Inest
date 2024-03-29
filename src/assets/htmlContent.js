@@ -1,4 +1,4 @@
-let leftBrainContent = `
+exports.leftBrainContent = `
 
 <div class="information">
   <div class="details">
@@ -23,7 +23,7 @@ let leftBrainContent = `
 
 `
 
-let rightBrainContent = `
+exports.rightBrainContent = `
 
 <div class="information">
   <div class="details">
@@ -50,12 +50,61 @@ let rightBrainContent = `
 
 `
 
-let yourPersonalityType = `
-<h5 style="margin-bottom: 5px; ">${title}</h5>
-<p>${description}</p>
+exports.yourPersonalityType = `
+<h5 style="margin-bottom: 5px; ">{{title}}</h5>
+<p>{{description}}</p>
 `
 
-let yourSkillScore = `
+const secTwo = {
+  'Verbal Skills': {
+    percentage: 90,
+    description:
+      'You have a strong command of language and are able to communicate effectively in both written and verbal form.',
+  },
+  'Numeric Skills': {
+    percentage: 80,
+    description:
+      'You are comfortable working with numbers and have a good understanding of mathematical concepts.',
+  },
+  'People Skills': {
+    percentage: 70,
+    description:
+      'You are able to work well with others and have strong interpersonal skills.',
+  },
+  'Adaptive Skills': {
+    percentage: 60,
+    description:
+      'You are able to adapt to new situations and environments quickly and effectively.',
+  },
+  'Analytical Skills': {
+    percentage: 50,
+    description:
+      'You are able to analyze and solve complex problems using logical reasoning and critical thinking.',
+  },
+  'Writing Skills': {
+    percentage: 40,
+    description:
+      'You are able to express your thoughts and ideas clearly and concisely in writing.',
+  },
+  'Time Management Skills': {
+    percentage: 30,
+    description:
+      'You are able to manage your time effectively and prioritize tasks to meet deadlines.',
+  },
+  overall: {
+    title: 'Highly Proficient',
+    description:
+      'Based on your skill scores, you are highly proficient in the following areas:',
+    points: [
+      'Verbal Skills',
+      'Numeric Skills',
+      'People Skills',
+      'Adaptive Skills',
+    ],
+  },
+}
+
+exports.yourSkillScore = `
 
 <div class="skills-information">
 <div class="skills-score">
@@ -129,7 +178,19 @@ let yourSkillScore = `
 </div>
 `
 
-let skillProficiencySection = `
+const secThree = {
+  score: 80,
+  description:
+    'Your emotional quotient is a measure of your emotional intelligence, which is the ability to recognize, understand, and manage your own emotions, as well as the emotions of others.',
+  points: [
+    'You are self-aware and able to recognize your own emotions and how they affect your thoughts and behavior.',
+    'You are able to manage your emotions effectively and remain calm under pressure.',
+    'You are empathetic and able to understand the emotions and perspectives of others.',
+    'You have strong social skills and are able to build and maintain positive relationships with others.',
+  ],
+}
+
+exports.skillProficiencySection = `
 <div class="content">
 <h4>Your Skill Proficiency Level -- ${secTwo.overall.title}</h4>
 <p style="margin-top: 1rem;">${secTwo.overall.description}</p>
@@ -149,7 +210,15 @@ ${secThree.points.map(point => `<p>${point}</p>`)}
 </div>
 </div>`
 
-let yourSuitableProfession = `
+const secOne = [
+  {
+    title: 'Option - 01',
+    description: 'Software Developer',
+    sectors: ['Information Technology', 'Software Development'],
+  },
+]
+
+exports.yourSuitableProfession = `
 <h4 style="margin-bottom: 12px; margin-top: 2rem">Your Best Suitable Profession</h4>
                   <br>
                   {{!-- <div class="grid-container">

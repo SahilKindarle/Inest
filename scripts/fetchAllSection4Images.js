@@ -12,7 +12,7 @@ const fetchAllImages = async () => {
     const buffer = Buffer.from(response.data, 'utf-8')
 
     fs.writeFile(`../public/images/section4/${option.id}.png`, buffer, () =>
-      console.log(`finished downloading: ${option.id}`)
+      console.info(`finished downloading: ${option.id}`)
     )
   })
 }

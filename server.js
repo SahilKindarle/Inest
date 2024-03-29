@@ -3,14 +3,15 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 
-const { formidable } = require('formidable')
-
 const logger = require('morgan')
 
 const serveStatic = require('serve-static')
 const history = require('connect-history-api-fallback')
 
-const fs = require('fs')
+const fs = require('fs-extra')
+const emailTemplate = require('./emailTemplate.js')
+const generatePDF = require('@root-kings/pdf-generator')
+
 const { Resend } = require('resend')
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -23,57 +24,65 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(logger('dev'))
 
-app.post('/api/submit', async (req, res, next) => {
-  const form = formidable({})
+app.post('/api/submit', async (req, res) => {
+  const body = req.body
 
-  form.parse(req, async (err, fields, files) => {
-    if (err) {
-      next(err)
-      return
-    }
+  if (!body || !body.pdfData) {
+    return res.status(400).json({ error: 'Invalid data' })
+  }
 
-    if (!files.pdf) {
-      res.status(400).json({ error: 'No file uploaded' })
-      return
-    }
+  // generate pdf from body info and save it to disk temporarily
+  let outputPath = await generatePDF(
+    emailTemplate,
+    {
+      name: 'Sahil',
+      report: body.pdfData,
+    },
+    __dirname + '/temp/report.pdf'
+  )
 
-    // create buffer from files.pdf[0].filepath
-    const buffer = fs.readFileSync(files.pdf[0].filepath)
+  // for windows:
+  if (outputPath.includes('\\')) {
+    // platform is windows, replace all backslashes with forward slashes
+    outputPath = outputPath.replace(/\\/g, '/')
+  }
 
-    const { data, error } = await resend.emails.send({
-      from: 'contact@rootkings.dev',
-      to: 'krushndayshmookh@gmail.com',
-      subject: 'Report PDF',
-      attachments: [
-        {
-          content: buffer,
-          // path: files.pdf[0].filepath,
-          filename: 'report.pdf',
-        },
-      ],
-      html: '<h1>here is your report.</h1>',
-      text: 'here is your report.',
-    })
+  // wait for the pdf to be written to disk
+  await new Promise(resolve => setTimeout(resolve, 1000))
 
-    if (error) {
-      console.error(error)
-      res.status(500).json({ error: 'Failed to send email' })
-      return
-    }
+  // read the pdf file
+  const buffer = fs.readFileSync(outputPath)
 
-    res.json(data)
+  // send email with pdf attachment
+  const { data: emailResponse, error } = await resend.emails.send({
+    from: 'contact@rootkings.dev',
+    to: 'krushndayshmookh@gmail.com',
+    subject: 'Report PDF',
+    attachments: [
+      {
+        content: buffer,
+        // path: files.pdf[0].filepath,
+        filename: 'report.pdf',
+      },
+    ],
+    html: '<h1>here is your report.</h1>',
+    text: 'here is your report.',
   })
+
+  if (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to send email' })
+  }
+
+  // delete the pdf file
+  fs.unlinkSync(outputPath)
+
+  return res.json(emailResponse)
 })
 
 app.use(history())
 app.use(serveStatic(__dirname + '/dist/spa'))
 
-// app.use(express.static(__dirname + '/dist/spa'))
-
-// app.get('*', (req, res) => {
-//   res.sendFile(__dirname + '/dist/spa/index.html')
-// })
-
 app.listen(process.env.PORT, () => {
-  console.log('Server is running on port 3000')
+  console.info('Server is running on port 3000')
 })
