@@ -1,43 +1,65 @@
 # Inest (inest)
 
-A Quasar Project
+Portal for INest (Innovation Nest) Career Assessment.
 
 ## Install the dependencies
 
+Install the `wkhtmltopdf` package for the PDF generation to work. You can download it from [here](https://wkhtmltopdf.org/downloads.html).
+
+After installation, ensure that the wkhtmltopdf executable is in your PATH by running the following command in your terminal:
+
 ```bash
-yarn
-# or
+wkhtmltopdf -H
+```
+
+If you see the help message, then you have successfully installed the package.
+
+Next, install the dependencies for the project:
+
+```bash
 npm install
 ```
+
+### Set up the environment variables
+
+Set up the environment variables by creating a `.env` file in the root of the project. You can copy the `.env.example` file and rename it to `.env`.
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
 ```bash
-quasar dev
+npm run dev
+```
+
+### Start the server in development mode
+
+```bash
+npm run dev:server
 ```
 
 ### Lint the files
 
 ```bash
-yarn lint
-# or
 npm run lint
 ```
 
 ### Format the files
 
 ```bash
-yarn format
-# or
 npm run format
 ```
 
 ### Build the app for production
 
 ```bash
-quasar build
+npm run build
 ```
 
-### Customize the configuration
+## Start the app in production mode
 
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+Ensure the app is built before starting the app in production mode.
+
+Ensure the environment variables are set up correctly in the `.env` file. Especially the `VITE_API_URL` variable should be set to `/` before building for production.
+
+```bash
+npm start
+```
