@@ -275,6 +275,7 @@
             </div>
           </div>
           <div>
+            <div class="col-12 q-pl-xl q-pt-lg"><signatureComponent /></div>
             <!-- The model data: <strong>{{ languagesSelection }}</strong>
             The model data: <strong>{{ languagesSelection2 }}</strong> -->
             <div class="col-12">
@@ -297,8 +298,12 @@
 
 <script>
 import { ref } from 'vue'
+import signatureComponent from '../components/SIgnatureComponent.vue'
 // import { useQuasar } from "quasar";
 export default {
+  components: {
+    signatureComponent,
+  },
   setup() {
     // const $q = useQuasar();
     const fName = ref(null)
