@@ -63,3 +63,8 @@ Ensure the environment variables are set up correctly in the `.env` file. Especi
 ```bash
 npm start
 ```
+
+### References
+
+- [Nginx Configuration on AWS EC2](https://blog.logrocket.com/how-to-run-node-js-server-nginx/)
+- [PM2 Process Manager](https://pm2.keymetrics.io/docs/usage/quick-start/)
