@@ -56,7 +56,7 @@ app.post('/api/submit', async (req, res) => {
   // send email with pdf attachment
   const { data: emailResponse, error } = await resend.emails.send({
     from: 'contact@rootkings.dev',
-    to: 'krushndayshmookh@gmail.com',
+    to: ['krushndayshmookh@gmail.com', 'sahilkindarle212@gmail.com'],
     subject: 'Report PDF',
     attachments: [
       {
