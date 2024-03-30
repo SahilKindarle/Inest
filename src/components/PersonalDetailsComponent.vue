@@ -5,7 +5,7 @@
         <div class="q-pt-lg q-pl-xl text-h3 poppins-regular text-weight-medium">
           Career Suitability Assessment
         </div>
-        <form class="q-gutter-md" @submit.prevent.stop="onSubmit">
+        <div class="q-gutter-md">
           <div class="q-pa-xl">
             <div class="text-h4 q-px-xl montserrat q-mb-lg">
               Personal Details
@@ -292,12 +292,13 @@
                   label="Start Assessment"
                   class="q-ma-xl q-px-xl"
                   color="primary"
+                  @click="onSubmit"
                 >
                 </q-btn>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </q-page>
@@ -362,6 +363,7 @@ export default {
     const languageRef = ref(null)
     const language2Ref = ref(null)
 
+    // component refs
     const signaturePad = ref(null)
 
     const genderOptions = ['Male', 'Female', 'Other']
@@ -399,7 +401,7 @@ export default {
       val => (val && val.length > 0) || 'Please provide a valid Email',
     ]
 
-    const onSubmit = () => {
+    const hasError = () => {
       fNameRef.value.validate()
       emailRef.value.validate()
       phoneRef.value.validate()
@@ -418,6 +420,39 @@ export default {
       marksScoredRef.value.validate()
       languageRef.value.validate()
       language2Ref.value.validate()
+
+      return (
+        fNameRef.value.hasError ||
+        emailRef.value.hasError ||
+        phoneRef.value.hasError ||
+        dobRef.value.hasError ||
+        genderRef.value.hasError ||
+        homeAddressRef.value.hasError ||
+        schoolAddressRef.value.hasError ||
+        classSectionRef.value.hasError ||
+        fatherNameRef.value.hasError ||
+        fatherMobileRef.value.hasError ||
+        fatherEmailRef.value.hasError ||
+        motherNameRef.value.hasError ||
+        motherMobileRef.value.hasError ||
+        motherEmailRef.value.hasError ||
+        ExamNameRef.value.hasError ||
+        marksScoredRef.value.hasError ||
+        languageRef.value.hasError ||
+        language2Ref.value.hasError
+      )
+    }
+
+    const onSubmit = () => {
+      console.log('in submit')
+
+      if (hasError()) {
+        $q.notify({
+          type: 'negative',
+          message: 'Please provide all required information.',
+        })
+        return
+      }
 
       const { isEmpty, data: signaturePadData } =
         signaturePad.value.saveSignature()
