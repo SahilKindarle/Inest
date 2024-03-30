@@ -48,7 +48,7 @@ app.post('/api/submit', async (req, res) => {
   }
 
   // wait for the pdf to be written to disk
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  await new Promise(resolve => setTimeout(resolve, 2000))
 
   // read the pdf file
   const buffer = fs.readFileSync(outputPath)
