@@ -13,7 +13,7 @@ import { defineComponent } from 'vue'
 import { VueSignaturePad } from 'vue-signature-pad'
 
 export default defineComponent({
-  name: 'MySignaturePad',
+  name: 'SignaturePad',
   components: { VueSignaturePad },
   methods: {
     undo() {
