@@ -8,33 +8,34 @@
 
         <form class="q-gutter-md" @submit.prevent.stop="onSubmit">
           <div class="q-pa-xl">
-            <div class="text-h6 q-px-xl montserrat q-mb-md">Section 4</div>
-            <div v-for="(que, index) in questionsFinal" :key="que.id">
-              <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
-                {{ `${index + 1}) ${que.title}` }}
-              </div>
-
-              <q-item
-                v-for="choice in que.choices"
-                :key="choice.id"
-                tag="label"
-                class="q-px-xl"
-              >
-                <q-img
-                  :src="choice.imageLink"
-                  class="q-ma-lg"
-                  spinner-color="white"
-                  style="height: 140px; max-width: 150px"
-                />
-                <q-radio
-                  v-model="answers"
-                  name="shape"
-                  :val="choice.answer"
-                  :label="choice.answer"
-                  color="primary"
-                />
-              </q-item>
+            <div class="text-h6 q-px-xl montserrat q-mb-md">
+              Section 4: Personality Type
             </div>
+
+            <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
+              {{ section.instructions }}
+            </div>
+
+            <q-item
+              v-for="opt in section.options"
+              :key="opt.id"
+              tag="label"
+              class="q-px-xl"
+            >
+              <q-img
+                :src="opt.imageLink"
+                class="q-ma-lg"
+                spinner-color="white"
+                style="height: 140px; max-width: 150px"
+              />
+              <q-radio
+                v-model="answer"
+                name="shape"
+                :val="opt"
+                :label="opt.label"
+                color="primary"
+              />
+            </q-item>
           </div>
           <div class="col-12">
             <div class="row justify-end">
@@ -56,8 +57,9 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useQuasar } from 'quasar'
 
-import questions from '../assets/questions.json'
+import section from '../assets/questions/section4.json'
 
 import { useAnswerStore } from 'src/stores/answer'
 
@@ -66,18 +68,38 @@ export default {
 
   setup() {
     const router = useRouter()
-    const questionsFinal = questions[3].questions
+    const $q = useQuasar()
 
-    const answers = ref(null)
+    const answer = ref(null)
+
+    const validateAnswers = () => {
+      if (!answer.value) {
+        $q.notify({
+          type: 'negative',
+          message: 'Please select one of the options',
+        })
+        return false
+      }
+      return true
+    }
+
+    const saveResult = () => {
+      if (!validateAnswers()) {
+        return false
+      }
+      useAnswerStore().section4 = answer.value
+      return true
+    }
 
     const onSubmit = () => {
-      useAnswerStore().section4 = answers.value
-      router.push('/section5')
+      if (saveResult()) {
+        router.push('/section5')
+      }
     }
 
     return {
-      questionsFinal,
-      answers,
+      section,
+      answer,
       onSubmit,
     }
   },

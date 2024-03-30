@@ -8,7 +8,9 @@
 
         <form class="q-gutter-md" @submit.prevent.stop="onSubmit">
           <div class="q-pa-xl">
-            <div class="text-h6 q-px-xl montserrat q-mb-md">Section 1</div>
+            <div class="text-h6 q-px-xl montserrat q-mb-md">
+              Section 1: Career Group
+            </div>
 
             <div class="col-12 q-px-xl q-mt-xl q-pt-md q-pb-md">
               {{ section.instructions }}
@@ -52,14 +54,18 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useQuasar } from 'quasar'
 
 import section from '../assets/questions/section1.json'
 
 import { useAnswerStore } from 'src/stores/answer'
 
 export default {
+  name: 'Section1Page',
+  
   setup() {
     const router = useRouter()
+    const $q = useQuasar()
 
     const answers = ref({})
     section.questions.forEach(question => {
@@ -80,7 +86,11 @@ export default {
       invalidAnswers.value = invalid
 
       if (invalid.length !== 0) {
-        alert('Please answer all questions')
+        $q.notify({
+          type: 'negative',
+          message: 'Please answer all questions',
+        })
+
         return false
       }
 

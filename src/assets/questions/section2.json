@@ -1,0 +1,126 @@
+{
+  "label": "Section 2: Skill Proficiency Scoring Methodology",
+  "instructions": "Read each statement below and choose one from the 3 options that best describes your interest.",
+  "questions": [
+    {
+      "id": "52b0bd31-71f8-491f-8fa6-ecaa0c3b403f",
+      "label": "I like reading books, magazines, newspaper, etc.",
+      "group": "A"
+    },
+    {
+      "id": "a8559938-7a9e-425e-928c-6d890a31b52c",
+      "label": "I like writing home-work, essays, composition etc.",
+      "group": "A"
+    },
+    {
+      "id": "4927286d-ba91-4ac5-ab4b-950f8ec353a2",
+      "label": "I like talking in meetings, assembly, competitions, classrooms, etc.",
+      "group": "A"
+    },
+
+    {
+      "id": "27eabe86-517c-49f7-b8b2-7fe1c4439031",
+      "label": "I like calculating distance and time.",
+      "group": "B"
+    },
+    {
+      "id": "f4ea4acd-5687-4bd0-928a-8cacab1f6a55",
+      "label": "I like to do height, length, width, depth, weight calculations",
+      "group": "B"
+    },
+    {
+      "id": "b1edb6f2-9b8e-4a93-bd34-2d31afb0a683",
+      "label": "I like to calculate cost, profit &amp; loss, interest etc.",
+      "group": "B"
+    },
+
+    {
+      "id": "d9bce9a2-da44-4229-832f-5dd42c8a3c22",
+      "label": "I like to mingle with unknown people also",
+      "group": "C"
+    },
+    {
+      "id": "c3e6c2c7-23a3-42a1-bdbd-533a7186da3d",
+      "label": "I like to help people in need",
+      "group": "C"
+    },
+    {
+      "id": "8edae665-164d-482f-ad11-83e726b9e30c",
+      "label": "I like to do things being a part of a group (studying, playing, etc.)",
+      "group": "C"
+    },
+
+    {
+      "id": "53c08142-63bb-468f-934c-b7d432e99042",
+      "label": "I like to be outdoors at all times",
+      "group": "D"
+    },
+    {
+      "id": "1d333e1b-038d-425e-bbdb-d851406d9c94",
+      "label": "I can easily adapt to new environments (school, location, etc.)",
+      "group": "D"
+    },
+    {
+      "id": "c356e51b-1c9d-4555-9487-0cd84ce27d2f",
+      "label": "I like to do certain things indoors and certain things outdoors",
+      "group": "D"
+    },
+
+    {
+      "id": "8e783ccb-76ca-4e25-9214-98309ea27ae0",
+      "label": "I browse the headings, pictures, charts before I start reading a chapter.",
+      "group": "E"
+    },
+    {
+      "id": "adb07b0e-39aa-4cac-81df-28abc839047c",
+      "label": "I make questions from a chapter before, during, and after reading it.",
+      "group": "E"
+    },
+    {
+      "id": "e172dfba-13b1-4b55-8faa-18fc644e6a25",
+      "label": "I try to get the meaning of new words as I see them for the first time.",
+      "group": "E"
+    },
+
+    {
+      "id": "2b38c9b4-a5df-420a-8855-2fd7e6fce03a",
+      "label": "I take notes as I read my text books.",
+      "group": "F"
+    },
+    {
+      "id": "119e775d-2004-4e54-bea3-e0298e8c56b3",
+      "label": "I rework, rewrite, or type up my notes.",
+      "group": "F"
+    },
+    {
+      "id": "96fa0580-7b1c-4e88-ae1a-00ecd1081a39",
+      "label": "I compare my notes with a classmate.",
+      "group": "F"
+    },
+
+    {
+      "id": "b13f0275-b72f-4429-98c4-faed1b18fa8c",
+      "label": "I use a to do list to keep track of completing my academic and personal activities.",
+      "group": "G"
+    },
+    {
+      "id": "487fde9e-0aeb-4645-b37d-17bfb0d09d59",
+      "label": "I start studying for quizzes and tests at least several days before I take them.",
+      "group": "G"
+    },
+    {
+      "id": "90fe9533-a2db-42e5-881f-3f2ed3cdc454",
+      "label": "I start papers and projects as soon as they are assigned.",
+      "group": "G"
+    }
+  ],
+  "groups": {
+    "A": "Verbal Skills",
+    "B": "Numeric Skills",
+    "C": "People Skills",
+    "D": "Adaptive Skills",
+    "E": "Analytical  Skills",
+    "F": "Writing Skills",
+    "G": "Time Management Skills"
+  }
+}

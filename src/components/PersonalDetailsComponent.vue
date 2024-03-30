@@ -298,7 +298,11 @@
 
 <script>
 import { ref } from 'vue'
-import signatureComponent from '../components/SIgnatureComponent.vue'
+
+import { useAnswerStore } from 'src/stores/answer'
+
+import signatureComponent from '../components/SignatureComponent.vue'
+
 // import { useQuasar } from "quasar";
 export default {
   components: {
@@ -494,6 +498,8 @@ export default {
         console.log(JSON.stringify(objFinal))
 
         localStorage.setItem('PersonalSectionAnswers', JSON.stringify(objFinal))
+
+        useAnswerStore().personalDetails = objFinal
 
         console.log(localStorage.getItem('PersonalSectionAnswers'))
       },
