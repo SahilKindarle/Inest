@@ -17,7 +17,6 @@
                   v-model="fName"
                   outlined
                   label="Full Name*"
-                  :dense="dense"
                   :rules="fNameRules"
                 />
               </div>
@@ -28,7 +27,6 @@
                   outlined
                   label="Email*"
                   type="email"
-                  :dense="dense"
                   :rules="emailRules"
                 />
               </div>
@@ -275,9 +273,18 @@
             </div>
           </div>
           <div>
-            <div class="col-12 q-pl-xl q-pt-lg"><SignatureComponent /></div>
-            <!-- The model data: <strong>{{ languagesSelection }}</strong>
-            The model data: <strong>{{ languagesSelection2 }}</strong> -->
+            <div class="col-12 q-pl-xl q-pt-lg">
+              <div id="app" style="width: 30%; height: 50%; margin-left: 10%">
+                <div class="text-body">Signature</div>
+                <VueSignaturePad
+                  ref="signaturePad"
+                  width="100%"
+                  height="100%"
+                  style="border: 1px solid grey"
+                />
+              </div>
+            </div>
+
             <div class="col-12">
               <div class="row justify-end">
                 <q-btn
@@ -300,16 +307,20 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAnswerStore } from 'src/stores/answer'
-import SignatureComponent from 'components/SignatureComponent.vue'
+import { VueSignaturePad } from 'vue-signature-pad'
 
-// import { useQuasar } from "quasar";
+import { useQuasar } from 'quasar'
 export default {
+  name: 'PersonalDetailsComponent',
+
   components: {
-    SignatureComponent,
+    VueSignaturePad,
   },
+
   setup() {
     const router = useRouter()
-    // const $q = useQuasar();
+    const $q = useQuasar()
+
     const fName = ref(null)
     const fNameRef = ref(null)
     const phoneRef = ref(null)
@@ -351,8 +362,103 @@ export default {
     const languageRef = ref(null)
     const language2Ref = ref(null)
 
+    const signaturePad = ref(null)
+
+    const genderOptions = ['Male', 'Female', 'Other']
+    const languageRules = [
+      val => (val && val.length > 2) || 'Please provide valid Language Name',
+    ]
+    const marksScoSpeakRules = [
+      val => (val && val > 0) || 'Please provide valid Marks',
+    ]
+    const examNameRules = [
+      val => (val && val.length > 5) || 'Please provide valid Exam Name',
+    ]
+    const motherMobileRules = [
+      val => (val && val.length > 9) || 'Please provide valid Phone Number',
+    ]
+    const fatherNameRules = [
+      val => (val && val.length > 0) || 'Please provide Father Name',
+    ]
+    const motherNameRules = [
+      val => (val && val.length > 0) || 'Please provide Mother Name',
+    ]
+    const classSectionRules = [
+      val => (val && val.length > 0) || 'Please provide class and section',
+    ]
+    const homeAddressRules = [
+      val => (val && val.length > 0) || 'Please provide Home Address',
+    ]
+    const schoolAddressRules = [
+      val => (val && val.length > 0) || 'Please provide Home Address',
+    ]
+    const fNameRules = [
+      val => (val && val.length > 0) || 'Please provide full name',
+    ]
+    const emailRules = [
+      val => (val && val.length > 0) || 'Please provide a valid Email',
+    ]
+
+    const onSubmit = () => {
+      fNameRef.value.validate()
+      emailRef.value.validate()
+      phoneRef.value.validate()
+      dobRef.value.validate()
+      genderRef.value.validate()
+      homeAddressRef.value.validate()
+      schoolAddressRef.value.validate()
+      classSectionRef.value.validate()
+      fatherNameRef.value.validate()
+      fatherMobileRef.value.validate()
+      fatherEmailRef.value.validate()
+      motherNameRef.value.validate()
+      motherMobileRef.value.validate()
+      motherEmailRef.value.validate()
+      ExamNameRef.value.validate()
+      marksScoredRef.value.validate()
+      languageRef.value.validate()
+      language2Ref.value.validate()
+
+      const { isEmpty, data: signaturePadData } =
+        signaturePad.value.saveSignature()
+
+      if (isEmpty) {
+        $q.notify({ type: 'negative', message: 'Please provide a signature' })
+        return
+      }
+
+      var objFinal = {
+        fName: fName.value,
+        phone: phone.value,
+        email: email.value,
+        gender: gender.value,
+        homeAddress: homeAddress.value,
+        schoolAddress: schoolAddress.value,
+        classSection: classSection.value,
+        fatherName: fatherName.value,
+        fatherOccupation: fatherOccupation.value,
+        fatherEmail: fatherEmail.value,
+        fatherMobile: fatherMobile.value,
+        motherName: motherName.value,
+        motherOccupation: motherOccupation.value,
+        motherEmail: motherEmail.value,
+        motherMobile: motherMobile.value,
+        examName: examName.value,
+        marksScoSpeak: marksScoSpeak.value,
+        language: language.value,
+        language2: language2.value,
+        languagesSelection: languagesSelection.value,
+        languagesSelection2: languagesSelection2.value,
+        dob: dob.value,
+        signature: signaturePadData,
+      }
+
+      useAnswerStore().personalDetails = objFinal
+
+      router.push('section1')
+    }
+
     return {
-      dense: ref(false),
       fName,
       phone,
       email,
@@ -393,118 +499,26 @@ export default {
       languageRef,
       language2Ref,
       marksScoredRef,
-      genderOptions: ['Male', 'Female', 'Other'],
-      languageRules: [
-        val => (val && val.length > 2) || 'Please provide valid Language Name',
-      ],
-      marksScoSpeakRules: [
-        val => (val && val > 0) || 'Please provide valid Marks',
-      ],
-      examNameRules: [
-        val => (val && val.length > 5) || 'Please provide valid Exam Name',
-      ],
-      motherMobileRules: [
-        val => (val && val.length > 9) || 'Please provide valid Phone Number',
-      ],
-      fatherNameRules: [
-        val => (val && val.length > 0) || 'Please provide Father Name',
-      ],
-      motherNameRules: [
-        val => (val && val.length > 0) || 'Please provide Mother Name',
-      ],
-      classSectionRules: [
-        val => (val && val.length > 0) || 'Please provide class and section',
-      ],
-      homeAddressRules: [
-        val => (val && val.length > 0) || 'Please provide Home Address',
-      ],
-      schoolAddressRules: [
-        val => (val && val.length > 0) || 'Please provide Home Address',
-      ],
-      fNameRules: [
-        val => (val && val.length > 0) || 'Please provide full name',
-      ],
-      emailRules: [
-        val => (val && val.length > 0) || 'Please provide a valid Email',
-      ],
-      onSubmit() {
-        fNameRef.value.validate()
-        emailRef.value.validate()
-        phoneRef.value.validate()
-        dobRef.value.validate()
-        genderRef.value.validate()
-        homeAddressRef.value.validate()
-        schoolAddressRef.value.validate()
-        classSectionRef.value.validate()
-        fatherNameRef.value.validate()
-        fatherMobileRef.value.validate()
-        fatherEmailRef.value.validate()
-        motherNameRef.value.validate()
-        motherMobileRef.value.validate()
-        motherEmailRef.value.validate()
-        ExamNameRef.value.validate()
-        marksScoredRef.value.validate()
-        languageRef.value.validate()
-        language2Ref.value.validate()
 
-        //   console.log("fName - ", JSON.stringify(fName))
-        // console.log("phone - ", JSON.stringify(phone))
-        // console.log("email - ", JSON.stringify(email))
-        // console.log("gender - ", JSON.stringify(gender))
-        // console.log("homeAddress - ", JSON.stringify(homeAddress))
-        // console.log("schoolAddress - ", JSON.stringify(schoolAddress))
-        // console.log("classSection - ", JSON.stringify(classSection))
-        // console.log("fatherName - ", JSON.stringify(fatherName))
-        // console.log("fatherOccupation - ", JSON.stringify(fatherOccupation))
-        // console.log("fatherEmail - ", JSON.stringify(fatherEmail))
-        // console.log("fatherMobile - ", JSON.stringify(fatherMobile))
-        // console.log("motherName - ", JSON.stringify(motherName))
-        // console.log("motherOccupation - ", JSON.stringify(motherOccupation))
-        // console.log("motherEmail - ", JSON.stringify(motherEmail))
-        // console.log("motherMobile - ", JSON.stringify(motherMobile))
-        // console.log("examName - ", JSON.stringify(examName))
-        // console.log("marksScoSpeak - ", JSON.stringify(marksScoSpeak))
-        // console.log("language - ", JSON.stringify(language))
-        // console.log("language2 - ", JSON.stringify(language2))
-        // console.log("languagesSelection - ", JSON.stringify(languagesSelection))
-        // console.log("languagesSelection2 - ", JSON.stringify(languagesSelection2))
-        // console.log("dob - ", JSON.stringify(dob))
+      // signature
+      signaturePad,
 
-        console.log(fName.value)
+      // rules
+      genderOptions,
+      languageRules,
+      marksScoSpeakRules,
+      examNameRules,
+      motherMobileRules,
+      fatherNameRules,
+      motherNameRules,
+      classSectionRules,
+      homeAddressRules,
+      schoolAddressRules,
+      fNameRules,
+      emailRules,
 
-        var objFinal = {}
-        objFinal.fName = fName.value
-        objFinal.phone = phone.value
-        objFinal.email = email.value
-        objFinal.gender = gender.value
-        objFinal.homeAddress = homeAddress.value
-        objFinal.schoolAddress = schoolAddress.value
-        objFinal.classSection = classSection.value
-        objFinal.fatherName = fatherName.value
-        objFinal.fatherOccupation = fatherOccupation.value
-        objFinal.fatherEmail = fatherEmail.value
-        objFinal.fatherMobile = fatherMobile.value
-        objFinal.motherName = motherName.value
-        objFinal.motherOccupation = motherOccupation.value
-        objFinal.motherEmail = motherEmail.value
-        objFinal.motherMobile = motherMobile.value
-        objFinal.examName = examName.value
-        objFinal.marksScoSpeak = marksScoSpeak.value
-        objFinal.language = language.value
-        objFinal.language2 = language2.value
-        objFinal.languagesSelection = languagesSelection.value
-        objFinal.languagesSelection2 = languagesSelection2.value
-        objFinal.dob = dob.value
-        console.log(JSON.stringify(objFinal))
-
-        localStorage.setItem('PersonalSectionAnswers', JSON.stringify(objFinal))
-
-        useAnswerStore().personalDetails = objFinal
-
-        console.log(localStorage.getItem('PersonalSectionAnswers'))
-
-        router.push('section1')
-      },
+      // submit
+      onSubmit,
     }
   },
 }
