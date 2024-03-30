@@ -275,7 +275,7 @@
             </div>
           </div>
           <div>
-            <div class="col-12 q-pl-xl q-pt-lg"><signatureComponent /></div>
+            <div class="col-12 q-pl-xl q-pt-lg"><SignatureComponent /></div>
             <!-- The model data: <strong>{{ languagesSelection }}</strong>
             The model data: <strong>{{ languagesSelection2 }}</strong> -->
             <div class="col-12">
@@ -298,17 +298,17 @@
 
 <script>
 import { ref } from 'vue'
-
+import { useRouter } from 'vue-router'
 import { useAnswerStore } from 'src/stores/answer'
-
-import signatureComponent from '../components/SignatureComponent.vue'
+import SignatureComponent from 'components/SignatureComponent.vue'
 
 // import { useQuasar } from "quasar";
 export default {
   components: {
-    signatureComponent,
+    SignatureComponent,
   },
   setup() {
+    const router = useRouter()
     // const $q = useQuasar();
     const fName = ref(null)
     const fNameRef = ref(null)
@@ -502,6 +502,8 @@ export default {
         useAnswerStore().personalDetails = objFinal
 
         console.log(localStorage.getItem('PersonalSectionAnswers'))
+
+        router.push('section1')
       },
     }
   },
