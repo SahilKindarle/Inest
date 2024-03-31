@@ -6,7 +6,8 @@
           Career Suitability Assessment
         </div>
 
-        <h1>All Done Page</h1>
+        <!-- <h1>All Done Page</h1> -->
+        <q-img src="../assets/thankyou.jpg" />
 
         <p>Submit Request Status: {{ status }}</p>
       </div>
