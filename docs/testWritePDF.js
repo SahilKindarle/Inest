@@ -31,6 +31,17 @@ const pages = pdfDoc.getPages()
 const { width, height } = pages[0].getSize()
 // console.info('Width:', width, 'Height:', height)
 
+// letter page
+const letterPage = pages[1]
+
+letterPage.drawText('John Doe' + ',', {
+  x: 76,
+  y: height - 127,
+  size: 12,
+  font: helveticaFont,
+  color: TEXT_COLOR,
+})
+
 // user details page
 const userPage = pages[2]
 
