@@ -17,6 +17,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { useQuasar } from 'quasar'
 
 import { useAnswerStore } from 'src/stores/answer'
@@ -28,6 +29,7 @@ export default {
 
   setup() {
     const $q = useQuasar()
+    const router = useRouter()
 
     const answerStore = useAnswerStore()
 
@@ -59,6 +61,7 @@ export default {
           color: 'positive',
         })
         status.value = 'success'
+        answerStore.clearData()
       } catch {
         $q.notify({
           message: 'Failed to submit request',
@@ -72,7 +75,13 @@ export default {
     }
 
     onMounted(async () => {
-      await sendData()
+      if (!Object.keys(answerStore.personalDetails).length) {
+        // If the user tries to access this page directly, redirect them to the home page
+        router.push('/')
+        return
+      } else {
+        await sendData()
+      }
     })
 
     return {

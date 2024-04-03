@@ -10,4 +10,15 @@ export const useAnswerStore = defineStore('answer', {
     section4: {},
     section5: {},
   }),
+
+  actions:{
+    clearData(){
+      this.personalDetails = {}
+      this.section1 = {}
+      this.section2 = {}
+      this.section3 = {}
+      this.section4 = {}
+      this.section5 = {}
+    }
+  }
 })
