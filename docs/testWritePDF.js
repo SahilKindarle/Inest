@@ -45,18 +45,7 @@ letterPage.drawText('John Doe' + ',', {
 // user details page
 const userPage = pages[2]
 
-const getApplicantDetails = () => {
-  const details = {
-    applicationId: '123456',
-    applicantName: 'John Doe',
-    applicantEmail: 'john.doe@email.com',
-    applicantPhone: '1234567890',
-    classAndSection: '5-A',
-    department: 'Computer Science',
-    institution: 'XYZ School',
-  }
-  return `${details.applicationId}\n${details.applicantName}\n${details.applicantEmail}\n${details.applicantPhone}\n${details.classAndSection}\n${details.department}\n${details.institution}`
-}
+
 
 // Draw a string of text diagonally across the first page
 userPage.drawText(getApplicantDetails(), {
@@ -137,13 +126,7 @@ reportPage1.drawText(personalityDetails, {
 
 const reportPage2 = pages[4]
 
-reportPage2.drawText('YOUR SKILL SCORE', {
-  x: SIDE_MARGIN,
-  y: height - 150,
-  size: 12,
-  font: helveticaFont,
-  color: TEXT_COLOR,
-})
+
 
 const skills = {
   'Verbal Skills': 90,

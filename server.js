@@ -8,9 +8,7 @@ const logger = require('morgan')
 const serveStatic = require('serve-static')
 const history = require('connect-history-api-fallback')
 
-const fs = require('fs-extra')
-const emailTemplate = require('./emailTemplate.js')
-const generatePDF = require('@root-kings/pdf-generator')
+const generateReport = require('./controllers/pdfGenerator')
 
 const { Resend } = require('resend')
 
@@ -27,33 +25,20 @@ app.use(logger('dev'))
 app.post('/api/submit', async (req, res) => {
   const body = req.body
 
-  if (!body || !body.pdfData) {
+  if (!body || !body.pdfData || !body.personalDetails) {
     return res.status(400).json({ error: 'Invalid data' })
   }
 
   // generate pdf from body info and save it to disk temporarily
-  let outputPath = await generatePDF(
-    emailTemplate,
-    {
-      name: 'Sahil',
-      report: body.pdfData,
-    },
-    __dirname + '/temp/report.pdf'
-  )
-
-  // for windows:
-  if (outputPath.includes('\\')) {
-    // platform is windows, replace all backslashes with forward slashes
-    outputPath = outputPath.replace(/\\/g, '/')
-  }
-
-  // wait for the pdf to be written to disk
-  await new Promise(resolve => setTimeout(resolve, 2000))
+  console.info('Generating report...')
+  const outputUint8Array = await generateReport(body)
+  console.info('Report generated successfully')
 
   // read the pdf file
-  const buffer = fs.readFileSync(outputPath)
+  const buffer = Buffer.from(outputUint8Array)
 
   // send email with pdf attachment
+  console.info('Sending email...')
   const { data: emailResponse, error } = await resend.emails.send({
     from: 'contact@rootkings.dev',
     to: ['krushndayshmookh@gmail.com', 'sahilkindarle212@gmail.com'],
@@ -61,7 +46,6 @@ app.post('/api/submit', async (req, res) => {
     attachments: [
       {
         content: buffer,
-        // path: files.pdf[0].filepath,
         filename: 'report.pdf',
       },
     ],
@@ -73,10 +57,7 @@ app.post('/api/submit', async (req, res) => {
     console.error(error)
     return res.status(500).json({ error: 'Failed to send email' })
   }
-
-  // delete the pdf file
-  fs.unlinkSync(outputPath)
-
+  console.info('Email sent successfully')
   return res.json(emailResponse)
 })
 

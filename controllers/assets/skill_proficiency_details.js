@@ -1,0 +1,80 @@
+const details = [
+  {
+    title: 'Fundamental',
+    description:
+      "At this level, you have a basic grasp of the foundational elements of the skill. You're in the early stages of learning and understanding its concepts and techniques. Your primary focus should be on dedicating time to learning, practicing, and experimenting with the skill. Consistently applying what you've learned and keeping a record of your progress can help reinforce your understanding and improve your proficiency over time.",
+    points: [
+      'Dedicate regular time for learning and practice.',
+      'Experiment with different techniques and concepts within the skill.',
+      'Keep a detailed record of your progress and achievements.',
+      ' Seek feedback from peers or mentors to identify areas for improvement.',
+      'Attend workshops, training sessions, or online courses to deepen your understanding',
+    ],
+    percentageMin: 0,
+    percentageMax: 40,
+  },
+  {
+    title: 'Intermediate',
+    description:
+      'In the intermediate range, you have progressed beyond the fundamentals and can perform tasks within this competency with moderate proficiency. While you may occasionally require guidance or support from more experienced individuals, you can generally handle tasks independently. Your focus should now shift towards actively applying and refining your knowledge or skill in various contexts. You should also develop the ability to adapt to changes within this area and discuss their implications confidently.',
+    points: [
+      'Actively seek out opportunities to apply the skill in real-world situations.',
+      'Collaborate with more experienced individuals to learn from their expertise.',
+      'Set specific goals for skill development and track your progress towards them.',
+      'Engage in self-reflection to identify strengths and areas for growth.',
+      'Take on challenging tasks or projects to expand your knowledge and capabilities',
+    ],
+    percentageMin: 40,
+    percentageMax: 60,
+  },
+  {
+    title: 'Advanced',
+    description:
+      "At the advanced level, you have attained a high level of proficiency in the skill. You can execute tasks associated with this competency with confidence and minimal assistance. Your expertise is recognized within your organization, and you're often sought out for advice or guidance on related matters. Beyond simply performing tasks, your focus extends to understanding the broader organizational or professional implications of this skill. You actively contribute to discussions at a senior level and may play a role in shaping policies or procedures within this area.",
+    points: [
+      'Mentor others who are at lower proficiency levels to solidify your own understanding.',
+      'Stay updated on industry trends and best practices within the skill domain.',
+      'Seek out leadership opportunities within projects or initiatives related to the skill.',
+      'Share your expertise through presentations, articles, or workshops.',
+      'Network with other professionals in the field to exchange knowledge and insights.',
+    ],
+    percentageMin: 60,
+    percentageMax: 80,
+  },
+  {
+    title: 'Expert',
+    description:
+      'As an expert, you are considered a master in this field. Your proficiency level is exceptional, and you are widely acknowledged for your expertise. You possess a deep understanding of the skill and its applications, allowing you to provide guidance, troubleshoot complex issues, and innovate within this area. Your expertise goes beyond individual tasks; you contribute to strategic decision-making and may lead initiatives or projects related to this skill. Others within your organization and possibly in external networks look to you as a leader and authority in this domain. Your ability to articulate complex concepts and processes in a clear and concise manner facilitates understanding and collaboration among colleagues and stakeholders.',
+    points: [
+      'Continuously push the boundaries of your expertise by exploring new applications or techniques.',
+      'Serve as a mentor or coach to develop talent within your organization or community.',
+      'Contribute to thought leadership by publishing research or thought pieces.',
+      'Actively participate in professional organizations or committees related to the skill.',
+      'Collaborate with other experts to tackle complex challenges or drive innovation within the field.',
+    ],
+    percentageMin: 80,
+    percentageMax: 100,
+  },
+]
+
+module.exports = function (pdfData) {
+  const allScores = pdfData.skills.map(skill => skill.percentage)
+
+  const proficiency =
+    allScores.reduce((acc, score) => score + acc, 0) / allScores.length
+
+  const level = details.find(detail => {
+    return (
+      proficiency > detail.percentageMin && proficiency <= detail.percentageMax
+    )
+  })
+
+  const points = level.points.map(point => `• ${point}`).join('\n')
+
+  return `SKILLS PROFICIENCY LEVEL - ${level.title}
+
+${level.description}
+
+${points}
+  `
+}

@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
-    "@root-kings/pdf-generator": "^1.0.0",
     "axios": "^1.2.1",
     "connect-history-api-fallback": "^2.0.0",
     "cors": "^2.8.5",
